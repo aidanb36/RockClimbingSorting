@@ -1,0 +1,1002 @@
+# RockClimbingSorting
+This C++ project takes the 1000 top rated rock climbing routes across the United States and sorts and manages the data using data structures and algorithms.
+The Nose, 2. Southwest Face > B. El Capitan > Valley North Side > Yosemite Valley > Yosemite National Park > California,4,5.9 C2,31,1
+Flyboys, Goat Wall > Mazama > Okanogan > Washington,3.1,5.9,18,2
+Snake Dike, 3. Southwest Face > D. Half Dome > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.6,5.7 R,8,3
+Regular Northwest Face of Half Dome, 1. Northwest Face > D. Half Dome > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.9,5.9 C1,23,4
+Epinephrine, Black Velvet Wall > 16-Black Velvet Canyon > Red Rock > Southern Nevada > Nevada,3.9,5.9,13,5
+Casual Route,The Diamond > Long's Peak > RMNP - Rock > Alpine Rock > Colorado,3.8,5.10a,7,6
+Salathe Wall,2. Southwest Face > B. El Capitan > Valley North Side > Yosemite Valley > Yosemite National Park > California,4,5.9 C2,35,7
+Matthes Crest Traverse - South to North,Matthes Crest > Cathedral Range > Tuolumne Meadows > Yosemite National Park > California,3.9,5.7,1,8
+Corrugation Corner,Main Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.9,5.7,3,9
+Moby Grape,4. Moby Grape Area > *Cannon Cliff > New Hampshire,3.8,5.8 PG13,7,10
+The Moonlight Buttress (Clean Aid),Moonlight Buttress > Zion National Park > Southwest Utah > Utah,3.8,5.8 C1,10,11
+Lower Exum Ridge,Grand Teton > Grand Teton National Park > Wyoming,3.9,5.7,6,12
+Sons of Yesterday,Western Royal Arches > Royal Arches > H. Royal Arches Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.9,-5.1,6,13
+Rewritten,Redgarden - Lumpe to the top > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.7,5.7,6,14
+The Yellow Spur,Redgarden - Tower One > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.8,5.9+,6,15
+Outer Space,Snow Creek Wall > Snow Creek Area > Icicle Creek > Leavenworth > Central-East Cascades Wenatchee & Leavenworth > Washington,3.8,5.9,6,16
+The Bastille Crack,The Bastille - N Face > The Bastille > Eldorado Canyon SP > Boulder > Colorado,3.5,5.7,5,17
+North East Ridge,Bugaboo Spire > The Bugaboos > Purcell Mountains > Columbia Mountains > British Columbia > Canada > North America > International,3.9,-5.8,10,18
+The Direct North Ridge w/ Gendarme,Mt Stuart > Stuart-Enchantments > Central-East Cascades Wenatchee & Leavenworth > Washington,3.9,5.9+,20,19
+Northeast Face,Pingora > Cirque of the Towers > Wind River Range > Wyoming,3.8,5.8+,12,20
+Durrance,Durrance Approach > Devils Tower > Wyoming,3.4,5.7+,6,21
+Playin' Hooky,Creek Side > Clear Creek Canyon > Golden > Colorado,3.3,5.8,4,22
+Whitney Gilman Ridge,1. Whitney-Gilman Area > *Cannon Cliff > New Hampshire,3.7,5.7,6,23
+Mithril Dihedral,Mt. Russell > 14 - Whitney & Surrounding Peaks > High Sierra > California,3.9,5.9+,6,24
+Central Pillar of Frenzy,6. Middle Cathedral Rock > P. Cathedral Area > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.8,5.9,5,25
+Crimson Chrysalis,Cloud Tower > 11-Juniper Canyon > Red Rock > Southern Nevada > Nevada,3.6,5.8+,9,26
+Tenaya Matthes Cathedral Traverse,Cathedral Range Enchainments > Cathedral Range > Tuolumne Meadows > Yosemite National Park > California,3.9,5.7,1,27
+Steck-Salathe,M. Sentinel Rock > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.8,-5.1,15,28
+South Face,Petit Grepon > RMNP - Rock > Alpine Rock > Colorado,3.7,5.8,8,29
+East Buttress,Mt. Whitney > 14 - Whitney & Surrounding Peaks > High Sierra > California,3.6,5.7,11,30
+Upper North Ridge w/Great Gendarme,Mt Stuart > Stuart-Enchantments > Central-East Cascades Wenatchee & Leavenworth > Washington,3.9,5.9,18,31
+Thunderbolt to Sill Traverse,Thunderbolt Peak > 09 - Palisades & Surrounding Peaks > High Sierra > California,3.9,5.9 Easy Snow,1,32
+Klahanie Crack,Shannon Falls Wall > Shannon Falls > Squamish > British Columbia > Canada > North America > International,3.7,5.7,1,33
+Third Pillar Regular Route,Dana Plateau > Lee Vining Canyon / Tioga Road > Sierra Eastside > California,3.8,-5.1,5,34
+The Nutcracker Suite (aka Nutcracker),5. Manure Pile Buttress (aka Ranger Rock) > C. El Cap Picnic Area (Eagle Creek) > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.6,5.8,5,35
+North Chimney,Castleton Tower > Castle Valley > Southeast Utah > Utah,3.6,5.9,4,36
+South Face,Charlotte Dome > 12 - Kearsarge Pass to Cedar Grove > High Sierra > California,3.8,5.8,12,37
+Bonnie's Roof,i. High E > The Trapps > The Gunks > New York,3.8,5.9,2,38
+Rock Wars,Long Wall > Northern Gorge > Red River Gorge > Kentucky,3.9,5.10a,1,39
+Center Route,Cynical Pinnacle > Cathedral Spires Area > South Platte > Colorado,3.9,5.9+,3,40
+Monkey Off My Back,(s) Monkey Face > Smith Rock > Central Oregon > Oregon,3.7,5.8+,1,41
+Regular Route,North Face > Fairview Dome > Tuolumne Meadows > Yosemite National Park > California,3.7,5.9,12,42
+Dark Shadows,Dark Shadows Wall > Mescalito > 10-Pine Creek Canyon > Red Rock > Southern Nevada > Nevada,3.6,5.8,4,43
+Igor Unchained,The Witch > The Needles > The Needles / Kern River > Western Sierra > California,3.8,5.9+,3,44
+Airy Interlude,The Witch > The Needles > The Needles / Kern River > Western Sierra > California,3.9,5.10a,3,45
+Irene's Arete,Disappointment Peak > Grand Teton National Park > Wyoming,3.8,5.8,7,46
+Lowe Route,Question Mark Wall > Lone Peak Cirque > Central Wasatch > Wasatch Range > Utah,3.9,5.8,3,47
+Star Chek,Galaxy Buttress > The Gorge > Sea to Sky (Squamish to Whistler) > British Columbia > Canada > North America > International,3.4,5.8+,3,48
+Royal Arches (5.10- or 5.7 A0),Central Royal Arches > Royal Arches > H. Royal Arches Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.3,5.10a/b A0,15,49
+Flower of High Rank,(u) Northeast Buttress > Suicide Rock > Tahquitz & Suicide Rocks > California,3.8,5.9,1,50
+Gold Rush,The Main Wall > Trout Creek > Central Oregon > Oregon,3.9,-5.1,1,51
+Fishhook Arête,Mt. Russell > 14 - Whitney & Surrounding Peaks > High Sierra > California,3.8,5.9,8,52
+Bear's Reach,East Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.4,5.7,3,53
+Dream of Wild Turkeys,Black Velvet Wall > 16-Black Velvet Canyon > Red Rock > Southern Nevada > Nevada,3.6,5.10a,7,54
+Open Book,(h) Open Book Area > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.7,5.9,3,55
+The Coffin,Coffin Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.8,5.9,1,56
+Pratt's Crack,Pratt's Crack / Dihedrals Area > Scheelite Canyon / Pratt's Crack Gully > Pine Creek Canyon > Bishop Area > Sierra Eastside > California,3.8,5.9,1,57
+Zoo View,Circus Wall > Sentinel Buttress > Moore's Wall (Routes) > Moore's Wall > 3. Piedmont Region > North Carolina,3.9,5.7+,2,58
+Sacherer Cracker,The Slack to West Buttress > Southwest Base > 1. Base Routes > B. El Capitan > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.8,5.10a,1,59
+Cascading Crystal Kaleidoscope (CCK),h. The Arrow Wall - CCK > The Trapps > The Gunks > New York,3.7,5.8 PG13,3,60
+White Punks on Dope,Voodoo Dome > The Needles > The Needles / Kern River > Western Sierra > California,3.8,5.9- PG13,6,61
+Big Bad Wolf,Riding Hood Wall > 01-Calico Basin > Red Rock > Southern Nevada > Nevada,3.1,5.9,3,62
+Lurking Fear,2. Southwest Face > B. El Capitan > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.5,5.7 C2,19,63
+West Face,Cardinal Pinnacle > Bishop Area > Sierra Eastside > California,3.8,5.10a,4,64
+Walt Bailey,South and East Faces > Devils Tower > Wyoming,3.9,5.9,1,65
+On the Lamb,West Face of the Lamb > Lamb Dome > Tuolumne Meadows > Yosemite National Park > California,3.8,5.9,4,66
+Hospital Corner,West Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.8,5.10a,2,67
+Dark Shadows (Full),Dark Shadows Wall > Mescalito > 10-Pine Creek Canyon > Red Rock > Southern Nevada > Nevada,3.6,5.8,10,68
+Recompense,The Prow Area > *Cathedral Ledge > New Hampshire,3.7,5.9,3,69
+Whodunit,(d) Northwest Recess > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.7,5.9,8,70
+Conn Diagonal, Outer Outlet > Outlets > Sylvan Lake > Custer State Park > South Dakota,3.9,5.7,3,71
+Son of Easy O,c. Frog's Head - the Arch > The Trapps > The Gunks > New York,3.8,5.8,2,72
+Zion,(g) Morning Glory Wall > Smith Rock > Central Oregon > Oregon,3.7,5.10a/b,4,73
+Penny Lane,Penny Lane > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.6,5.9,1,74
+Dopey Duck,Shortoff Mountain > Linville Gorge > 2. Northern Mountains Region > North Carolina,3.8,5.9,3,75
+Super Crack,7) Thunder Buttress > Beauty Mountain > New River Gorge Proper > The New River Gorge > West Virginia,3.9,5.9+,1,76
+Vertigo,4. Moby Grape Area > *Cannon Cliff > New Hampshire,3.8,5.9 A0 R,4,77
+Lost Arrow Tip,Lost Arrow Spire > E. Yosemite Falls Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.8,5.7 C2,2,78
+Supercrack (aka Crack Attack),Indian Creek > Northern Gorge > Red River Gorge > Kentucky,3.8,5.9+,1,79
+Tachycardia,Heart Rock > Heart Rock Area > Maple Canyon Road > Maple Canyon > Central Utah > Utah,3.6,5.7,3,80
+Birdland,Brass Wall > 10-Pine Creek Canyon > Red Rock > Southern Nevada > Nevada,3.4,5.7+,6,81
+Bird of Fire,Isles in the Sky (Northeast Face) > Isles in the Sky > Split Rocks West > Split Rocks > Pinto Basin > Joshua Tree National Park > California,3.8,5.10a,1,82
+S-Direct,The Thumb Area > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.8,5.9+ R,7,83
+Roadside Attraction,Graining Fork Nature Preserve (a.k.a. Roadside Crag) > Natural Bridge Region > Red River Gorge > Kentucky,3.7,5.7,2,84
+Pear Buttress,J-Crack Slab Area > The Book > Lumpy Ridge > Estes Park Valley > Colorado,3.6,5.8,5,85
+Southwest Arete,Grandma Peabody Boulder > Peabody Boulders > Buttermilks Main > Buttermilk Country > Bishop Area > Sierra Eastside > California,3.8,5.9,1,86
+Pioneer Route,(s) Monkey Face > Smith Rock > Central Oregon > Oregon,3.5,5.7 C0,3,87
+Ruper,Redgarden - Tower One > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.6,5.8+,6,88
+Godzilla,(C) Main Wall left side > Lower Town Wall > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.7,5.9,1,89
+Frogland,North Face > Whiskey Peak > 16-Black Velvet Canyon > Red Rock > Southern Nevada > Nevada,3.5,5.8,6,90
+Four Sheets to the Wind,Junkyard Wall > Junkyard Area > New River Gorge Proper > The New River Gorge > West Virginia,3.8,5.9+,1,91
+Triple Overhangs,Summit Wall > Lone Peak Cirque > Central Wasatch > Wasatch Range > Utah,3.8,5.10a,4,92
+Anti-Jello Crack,Dome Rock > The Needles / Kern River > Western Sierra > California,3.8,5.10a,4,93
+Skywalker,Shannon Falls Wall > Shannon Falls > Squamish > British Columbia > Canada > North America > International,3.5,5.8,5,94
+Sasquatch,Pentapitch Area > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.8,5.9+,1,95
+Culp-Bossier,Hallett Peak > RMNP - Rock > Alpine Rock > Colorado,3.6,5.8+,8,96
+Rosy Crucifixion,Redgarden - Tower Two > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.8,5.10a/b PG13,3,97
+The Grand Traverse,Grand Teton > Grand Teton National Park > Wyoming,3.9,5.8,1,98
+Open Book,Finger of Fate > The Sawtooth Range > Central Idaho > Idaho,3.7,5.8,5,99
+The Line,East Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.7,5.9,3,100
+Sun Ribbon Arete,Temple Crag > 09 - Palisades & Surrounding Peaks > High Sierra > California,3.7,5.10a,22,101
+Black September,3. Black Wall - Right > Black Wall > Donner Summit > I-80 Corridor > Lake Tahoe > California,3.8,5.9,1,102
+Reed's Pinnacle-Direct Route,Reed's Pinnacle > At. Reed's Pinnacle Area > Lower Merced River Canyon > Yosemite Valley > Yosemite National Park > California,3.7,5.10a,3,103
+Two Bag Face,3) Workmen's Buttress > Fern Buttress > New River Gorge Proper > The New River Gorge > West Virginia,3.9,5.9 R,1,104
+Frosted Mug,Upper Beer Wall > Beer Walls > B: Chapel Pond Pass > Adirondacks > New York,3.8,5.9,1,105
+Sparerib,Sparerib Area > East Side > Gallatin Canyon > Southwest Region > Montana,3.8,5.8,2,106
+Laughing Crack,Wall Area > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.5,5.7,1,107
+Stanley-Burgner,Prusik Peak > Stuart-Enchantments > Central-East Cascades Wenatchee & Leavenworth > Washington,3.7,5.10a,6,108
+Endgame,End Pinnacle > Rockfellow Group > East Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.7,5.10a/b,5,109
+Touchstone Wall,Cerberus Gendarme > Zion National Park > Southwest Utah > Utah,3.7,5.9+ C2,8,110
+Kor's Flake,Sundance Buttress > Lumpy Ridge > Estes Park Valley > Colorado,3.6,5.7+,6,111
+Vertical Smile,Summit Wall > Lone Peak Cirque > Central Wasatch > Wasatch Range > Utah,3.8,5.10a,1,112
+The Martyr,Saint Peter's Overlook > Old Stage Road > Colorado Springs > Colorado,3.8,5.9+,2,113
+Rebuffat's Arete,Redgarden - Lumpe to the top > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.7,5.7,1,114
+West Face,Leaning Tower > Q. Leaning Tower Area > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.6,5.7 C2,11,115
+Bishops Terrace,G. Church Bowl > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.6,5.8,1,116
+Kor-Ingalls Route,Castleton Tower > Castle Valley > Southeast Utah > Utah,3.4,5.9+,4,117
+West Ridge,Prusik Peak > Stuart-Enchantments > Central-East Cascades Wenatchee & Leavenworth > Washington,3.5,5.7,4,118
+McTech Arete,Crescent Spire > The Bugaboos > Purcell Mountains > Columbia Mountains > British Columbia > Canada > North America > International,3.7,-5.1,6,119
+The Beast Flake,The Prow Area > *Cathedral Ledge > New Hampshire,3.8,5.9,1,120
+West Crack,West Face > Daff Dome > Daff Area > Tuolumne Meadows > Yosemite National Park > California,3.6,5.9,5,121
+Original Route,The Mace > Cathedral Rock Area > Sedona > Sedona Area > Northern Arizona > Arizona,3.6,5.9+,5,122
+Traveler Buttress,Main Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.7,5.9,4,123
+Quadrophenia AKA Bara Bara,Hurricane Crag > C: Keene Region > Adirondacks > New York,3.8,5.7+ PG13,4,124
+Strawberry Fields,Reflector Oven > Old Rag > Shenandoah National Park > Shenandoah & NW VA Region > Virginia,3.8,5.9+,1,125
+Moby Dick,Moby Dick and Pterodactyl Terrace > Southwest Base > 1. Base Routes > B. El Capitan > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.7,5.10a,1,126
+Reppys Crack,4. Moby Grape Area > *Cannon Cliff > New Hampshire,3.7,5.8,1,127
+Air Show,Circus Wall > Sentinel Buttress > Moore's Wall (Routes) > Moore's Wall > 3. Piedmont Region > North Carolina,3.8,5.8+,2,128
+CCK Direct,h. The Arrow Wall - CCK > The Trapps > The Gunks > New York,3.8,5.9 PG13,2,129
+Center Thumb,South Summit Wall > Lone Peak Cirque > Central Wasatch > Wasatch Range > Utah,3.8,5.9,5,130
+Mexican Crack,Crescent Crack Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.7,5.10a,1,131
+Modern Times,h. The Arrow Wall - CCK > The Trapps > The Gunks > New York,3.7,5.8+,2,132
+Upper Diagonal,05: Pedestal Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.8,5.9,1,133
+Marshall's Madness - Crack of Dawn,South Peak West Face (Main Area) > South Peak - West Face > Seneca Rocks > West Virginia,3.7,5.10a,2,134
+Bloody Mary,Poke-O-Moonshine Main Face > Poke-O-Moonshine > A: Lake Champlain Region > Adirondacks > New York,3.8,5.9+,6,135
+Directissima,i. High E > The Trapps > The Gunks > New York,3.7,5.9,2,136
+Cerberus,Tricouni Nail/Cerberus > Tenpins/Switchbacks > Custer State Park > South Dakota,3.8,5.8,1,137
+Direct Petzoldt Ridge,Grand Teton > Grand Teton National Park > Wyoming,3.6,5.7,6,138
+Ellingwood Ledges,The Crestones > Sangre de Cristo Range > Alpine Rock > Colorado,3.5,5.7,1,139
+Shoshone South Face,Shoshone Spire > Blodgett Canyon > Northwest Region > Montana,3.7,5.8+,5,140
+Zanzibar Dihedral,Weller Slab > Independence Pass > Colorado,3.8,5.8,1,141
+Assembly Line,East and Northeast Buttress Approach > Devils Tower > Wyoming,3.7,5.9,2,142
+The Armadillo,"01. Chimney Pond (""South"") Basin - Summer Rock Routes > Katahdin > j. The Maine Highlands (inc. BSP / Katahdin ) > Maine",3.8,5.7,1,143
+Holy War,Wall of Useless Conflict > Foster Falls > Tennessee,3.7,5.9,1,144
+Royal Flush,Mount Royal (near Frisco) > 10 Mile Canyon > Colorado,3,5.9,8,145
+South Face,I. Washington Column > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.5,5.8 C1,11,146
+The Nose,Nose Area > Looking Glass Rock > 1. Southern Mountains Region > North Carolina,3.5,5.8,4,147
+Tribal Boundaries,Flaming Rock > City of Rocks > South Idaho > Idaho,3.7,5.10a/b,1,148
+Blue Sun,Way Rambo > Indian Creek > Southeast Utah > Utah,3.6,-5.1,1,149
+Sedona's Scenic Cruise,Gibraltar Rock > Gibraltar Rock Area > Sedona > Sedona Area > Northern Arizona > Arizona,3.6,5.9,5,150
+Northeast Buttress,5. Higher Cathedral Rock > P. Cathedral Area > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.7,5.9+ PG13,11,151
+The Peacemaker,The Sheepshead > Sheepshead Area (Southwest) > West Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.5,5.10a,7,152
+Senior Citizens in Space,Private Idaho > Lookout Point Area > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.7,5.7+,1,153
+The Book of Solemnity,Barber Wall > *Cathedral Ledge > New Hampshire,3.7,5.10a,2,154
+Autumn,Long Wall > Northern Gorge > Red River Gorge > Kentucky,3.7,5.9,1,155
+Edward's Crack,Walt's Wall > Vedauwoo > Wyoming,3.6,5.7,2,156
+East Face,Mt. Whitney > 14 - Whitney & Surrounding Peaks > High Sierra > California,3.4,5.7,10,157
+Rock On,The Apron > The Chief > Squamish > British Columbia > Canada > North America > International,3.6,5.10a,5,158
+On The Loose,The Spider's Web > B: Chapel Pond Pass > Adirondacks > New York,3.7,5.10a,1,159
+Old Town,The Precipice aka The South Wall > -Acadia National Park > Maine,3.7,5.7+,1,160
+Bloody Fingers,Super Hits - Bloody Fingers > Breadloaves > City of Rocks > South Idaho > Idaho,3.7,5.10a,1,161
+Diedre,The Apron > The Chief > Squamish > British Columbia > Canada > North America > International,3.4,5.8,6,162
+Straight and Narrow,Shortoff Mountain > Linville Gorge > 2. Northern Mountains Region > North Carolina,3.7,5.10a,3,163
+Sour Mash,Black Velvet Wall > 16-Black Velvet Canyon > Red Rock > Southern Nevada > Nevada,3.6,5.10a,6,164
+Fingertrip,West Face - Right Side > (g) West Face > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.5,5.7,4,165
+The Zip,The Zip > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.7,5.10a,1,166
+Plumber's Crack,Plumber's Crack > Kraft Boulders > * Red Rock Bouldering > Red Rock > Southern Nevada > Nevada,3.6,5.9 V2 R,1,167
+The El,Pitchoff Chimney Cliff > C: Keene Region > Adirondacks > New York,3.7,5.8,3,168
+Mountaineer's Route,The Elephant's Perch > The Sawtooth Range > Central Idaho > Idaho,3.5,5.9,7,169
+Wheat Thin,Elephant Rock - East > Elephant Rock > City of Rocks > South Idaho > Idaho,3.6,5.7,1,170
+Finger of Fate,The Titan > Fisher Towers > Southeast Utah > Utah,3.6,5.8 C2+,8,171
+Green Monster,Green Monster Slab > Rock Canyon > Southern Wasatch > Wasatch Range > Utah,3.7,5.9,1,172
+West Pole,South Peak West Face (Main Area) > South Peak - West Face > Seneca Rocks > West Virginia,3.7,5.7+,2,173
+Spaceshot,Leaning Wall > Zion National Park > Southwest Utah > Utah,3.5,5.7 C2,8,174
+Double Cross,The Old Woman - West Face > The Old Woman > Hidden Valley Campground > Hidden Valley Area > Joshua Tree National Park > California,3.5,5.7+,1,175
+Boi-oi-oi-ing!,Orange Pillar > Patricia Bowl > Rock Creek > Mammoth Lakes Area > Sierra Eastside > California,3.7,5.10a,3,176
+The Diagonal,Wallface > E: High Peaks Region > Adirondacks > New York,3.4,5.8,7,177
+Gordon's Hangover,Green Adjective Gully > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.7,5.9+,1,178
+The Golden Dream,s. The Golden Wall > Peterskill > The Gunks > New York,3.7,5.9,1,179
+Skyline,Morning Glory Spire > City of Rocks > South Idaho > Idaho,3.6,5.8,1,180
+Handcracker Direct,West Ridge - part C - Pony Express to Long John > The West Ridge > Eldorado Canyon SP > Boulder > Colorado,3.6,5.10a,5,181
+Pentapitch,Pentapitch Area > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.5,5.8,5,182
+Weird Water,Middle Marker Area > Marker > Magna Carta > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.7,5.7,1,183
+Mile High Club,Morning Star Peak > Glacier Peak Wilderness > Darrington and Mountain Loop Hwy > Northwest Region > Washington,3.5,5.10a,7,184
+Soler,South and East Faces > Devils Tower > Wyoming,3.6,5.9,2,185
+In Pursuit of Excellence,T-Wall East > The Tennessee Wall > Tennessee,3.7,5.9+,1,186
+Leonids,Left Wall > The Wedge > El Cajon Mountain > South San Diego County > San Diego County > California,3.6,5.9,3,187
+Blown Away,West Face > Daff Dome > Daff Area > Tuolumne Meadows > Yosemite National Park > California,3.7,5.9 PG13,5,188
+Hobbit Book,West Face > Mariuolumne Dome > Tuolumne Meadows > Yosemite National Park > California,3.6,5.7,4,189
+Forest Lawn,Bastion Towers > Rockfellow Group > East Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.7,5.9+,3,190
+They Died Laughing,The North End > *Cathedral Ledge > New Hampshire,3.7,5.9,1,191
+West Face Variation,(s) Monkey Face > Smith Rock > Central Oregon > Oregon,3.7,5.8 C0,5,192
+Armatron,Brownstone Wall > 11-Juniper Canyon > Red Rock > Southern Nevada > Nevada,3.5,-5.9,6,193
+Toxic Shock,Toxic - Tang Area > Inner Walls > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.7,5.9,1,194
+Fear of Flying,Upper Spire > Phantom Spires > Highway 50 Corridor > Lake Tahoe > California,3.7,5.9+,2,195
+Edge of Time,The Fin > Jurassic Park - Lily Lake > CO Hwy 7 & Tributaries > Estes Park Valley > Colorado,3.4,5.9+,1,196
+Ants' Line,i. High E > The Trapps > The Gunks > New York,3.6,5.9,1,197
+Otto's Route,Independence Monument > Colorado National Monument > Grand Junction Area > Colorado,3.4,5.8+,5,198
+Lost Arrow,Lost Arrow Spire > City of Rocks > South Idaho > Idaho,3.6,5.7 R,2,199
+Rye Crisp,Elephant Rock - East > Elephant Rock > City of Rocks > South Idaho > Idaho,3.6,5.8,1,200
+Lonesome Dove,Jimmy Cliff > *Rumney > New Hampshire,3.6,5.10a,1,201
+Gossamer,Picture Window > Monster North > Magna Carta > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.7,5.7,1,202
+Gambit,Shirt Tail Peak > Eldorado Canyon SP > Boulder > Colorado,3.6,5.8,5,203
+Gobbler's Grunt,Turkey Rock > Turkey Rocks > South Platte > Colorado,3.7,5.9,3,204
+One Hand Clapping,1. Black Wall - Left > Black Wall > Donner Summit > I-80 Corridor > Lake Tahoe > California,3.6,5.9,4,205
+Garfield Goes To Washington,White House Wall > Emancipation > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.7,5.8,3,206
+27 Years of Climbing,The Gallery > Pendergrass-Murray Recreational Preserve (PMRP) > Red River Gorge > Kentucky,3.5,5.8,1,207
+Mainliner,Sundance Buttress > Lumpy Ridge > Estes Park Valley > Colorado,3.6,5.9,5,208
+Ecstasy,South End > Seneca Rocks > West Virginia,3.6,5.7,3,209
+Straight Shooter,Straight Shooter Wall > 10-Pine Creek Canyon > Red Rock > Southern Nevada > Nevada,3.6,5.9+,1,210
+Triple S,South Peak West Face (Main Area) > South Peak - West Face > Seneca Rocks > West Virginia,3.6,5.8+,2,211
+Climb of the Ancient Mariner,The Bookend > Lumpy Ridge > Estes Park Valley > Colorado,3.7,5.10a,3,212
+Princely Ambitions,(C) Main Wall left side > Lower Town Wall > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.6,5.9,2,213
+"Titties and Beer  (aka ""World's Hardest 5.8"")",Sun Wall > Looking Glass Rock > 1. Southern Mountains Region > North Carolina,3.6,5.10a,5,214
+Cruel Sister,(3) Catwalk Cliff > West Side > (z) Lower Gorge > Smith Rock > Central Oregon > Oregon,3.6,5.10a,1,215
+Yellow Ridge,a. Beginning of cliff to Gelsa > The Near Trapps > The Gunks > New York,3.6,5.7,3,216
+Cake Walk,T-Wall East > The Tennessee Wall > Tennessee,3.7,5.10a,1,217
+Satan's Corner,Dihedrals Area > Gate Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.6,5.8,2,218
+Soler,Upper Broadway > South Peak - East Face > Seneca Rocks > West Virginia,3.6,5.7,2,219
+Esthesia,The Spider's Web > B: Chapel Pond Pass > Adirondacks > New York,3.7,5.10a,1,220
+The Perfect Lie Back,6 - Liebacks Area > The Fortress > Woodfords Canyon > Carson Pass Highway (88) > Lake Tahoe > California,3.7,5.8,1,221
+The Prow,I. Washington Column > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.6,5.8 C2,12,222
+Phobos,Phobos/Deimos Cliff > Tuolumne Meadows > Yosemite National Park > California,3.7,5.9+,3,223
+Black and Tan,M) Fantasy Area > Endless Wall > New River Gorge Proper > The New River Gorge > West Virginia,3.6,5.10a,1,224
+Loose Ends,J-Crack Slab Area > The Book > Lumpy Ridge > Estes Park Valley > Colorado,3.6,5.9,5,225
+Pleasant Overhangs,South Peak West Face (Main Area) > South Peak - West Face > Seneca Rocks > West Virginia,3.6,5.7,3,226
+Southwest Rib,South Early Winters Spire > Liberty Bell Group > Washington Pass > North Cascades > Hwy 20 and North Cascades National Park > Northwest Region > Washington,3.4,5.8,7,227
+Arachnid,Tower Rock > Northern Gorge > Red River Gorge > Kentucky,3.7,5.8+,1,228
+Gamesmanship,Poke-O-Moonshine Main Face > Poke-O-Moonshine > A: Lake Champlain Region > Adirondacks > New York,3.6,5.8+,5,229
+Guppy,Creek Side > Clear Creek Canyon > Golden > Colorado,3.5,5.8,1,230
+Tulgey Wood,West Face > Devils Tower > Wyoming,3.6,5.10a,3,231
+White Lightning,Table Rock > Linville Gorge > 2. Northern Mountains Region > North Carolina,3.6,5.8+,2,232
+TR,The Spider's Web > B: Chapel Pond Pass > Adirondacks > New York,3.7,5.10a/b,1,233
+Straw Turkey,Turkey Rock > Turkey Rocks > South Platte > Colorado,3.7,5.10a,3,234
+Cheaper Than a Movie,Chica Bonita Wall > Pendergrass-Murray Recreational Preserve (PMRP) > Red River Gorge > Kentucky,3.6,5.8,1,235
+Darkness 'til Dawn,Redgarden - Lumpe to the top > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.6,5.10a,1,236
+Thin Slice,Parking Lot Rock - Northeast > Parking Lot Rock > City of Rocks > South Idaho > Idaho,3.6,5.10a,1,237
+Double Crack,j. The Yellow Wall and The Seasons > The Trapps > The Gunks > New York,3.6,5.8,1,238
+Evergreen,Pine Tree Rock > Chopping Block > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.7,5.9,1,239
+Comfortably Numb,The Pinnacle > Sand Rock > Alabama,3.6,5.9,1,240
+Prodigal Sun,Angel's Landing > Zion National Park > Southwest Utah > Utah,3.4,5.8 C2,9,241
+Friday the 13th,Nautilus > Vedauwoo > Wyoming,3.6,5.10a/b,3,242
+The Green Adjective,Green Adjective Gully > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.6,5.9+,3,243
+Regular Route (Higher Cathedral Spire),3. Higher Cathedral Spire > P. Cathedral Area > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.5,5.9,4,244
+Cosmosis,Bell Buttress - Main Crag > Bell Buttress Massif > Boulder Canyon > Boulder > Colorado,3.6,5.10a,2,245
+Great Red Book,The Great Red Book Area > 04-Second Pullout (Calico II) > Red Rock > Southern Nevada > Nevada,3.4,5.8,2,246
+Mainstreet,Coke Bottle > Vedauwoo > Wyoming,3.6,5.10a,1,247
+Minor Dihedral,Haystack Mountain > Deep Lake Area > Wind River Range > Wyoming,3.6,5.9,10,248
+MF,e. The Mac Wall (Something Interesting) > The Trapps > The Gunks > New York,3.6,5.9,2,249
+Flakes of Wrath,Wall Street > Potash Road > Southeast Utah > Utah,3.5,5.9+,1,250
+Kamps Crack (Classic Crack),Inner Outlet > Outlets > Sylvan Lake > Custer State Park > South Dakota,3.7,-5.8,1,251
+Congratulations,05: Pedestal Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.6,5.10a,1,252
+Classic Dihedral,Bucksnort Slab > Pine Area > South Platte > Colorado,3.6,5.7,2,253
+Space Truckin',Eagle Lake Cliff > Eagle Creek Canyon > West Shore > Lake Tahoe > California,3.6,-5.1,1,254
+Moonshine Dihedral,(k) The Dihedrals > Smith Rock > Central Oregon > Oregon,3.6,5.9,2,255
+The Snaz,Cathedral Buttress > Death Canyon > Grand Teton National Park > Wyoming,3.6,5.10a,1,256
+Cheerio Bowl,D. Pricker Peak > C. Hidden Peaks > E. South Canyon > *Jackson Falls > Illinois,3.6,5.10a,1,257
+Northeast Ridge of the Pinnacle,05. Huntington Ravine > WM: Pinkham / Presidentials > New Hampshire,3.4,5.7,7,258
+Shock and Awe,West Buttress - South > Castle Rocks > Castle Rocks > South Idaho > Idaho,3.7,5.10a,1,259
+J-Crack,J-Crack Slab Area > The Book > Lumpy Ridge > Estes Park Valley > Colorado,3.6,5.9+,4,260
+Seasoned in the Sun,Grand Wall Base Area > The Chief > Squamish > British Columbia > Canada > North America > International,3.6,-5.1,1,261
+The Reacharound,Lakeside in the Woods > Murrin Park > Squamish > British Columbia > Canada > North America > International,3.6,5.9,1,262
+Private Pizza,Private Pizza Wall > Lower Buckhorn > Buckhorn Wash > San Rafael Swell - North > San Rafael Swell > South Central Utah > Utah,3.6,5.9,1,263
+The Sting,Poke-O-Moonshine Main Face > Poke-O-Moonshine > A: Lake Champlain Region > Adirondacks > New York,3.6,5.8+,1,264
+Cromagnon,East Face > Dike Wall > Lake George > Mammoth Lakes Area > Sierra Eastside > California,3.6,5.10a,1,265
+Olive Oil,Rose Tower > 11-Juniper Canyon > Red Rock > Southern Nevada > Nevada,3.3,5.7,5,266
+WMA Crack,Confederate Cracks > West Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.6,5.9+,1,267
+Mars Attacks,The Fin > Dry Creek Road Area > West Sedona > Sedona Area > Northern Arizona > Arizona,3.5,5.9 PG13,4,268
+The Metamorphosis,Wind Tower - S Face > The Wind Tower > Eldorado Canyon SP > Boulder > Colorado,3.6,-5.1,1,269
+North Arete,Bear Creek Spire > 06 - Little Lakes Valley & Mono Recesses > High Sierra > California,3.5,5.8,6,270
+The Green Spur,Redgarden - Lumpe to the top > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.5,5.9+,2,271
+Blind Faith,The Bastille - W Face > The Bastille > Eldorado Canyon SP > Boulder > Colorado,3.5,5.10a,2,272
+Cryogenics,Lower Grotto Wall > Grotto Walls Area > Independence Pass > Colorado,3.6,-5.1,2,273
+East of Eden,The Eden Wall > Eden Area > The Narrows > Poudre Canyon > Fort Collins > Colorado,3.6,5.9,1,274
+Golden Locks,T-Wall East > The Tennessee Wall > Tennessee,3.6,5.9,1,275
+Ashtar Command,Ataxia Tower > Mount Carmel Tunnel > Zion National Park > Southwest Utah > Utah,3.5,5.9,2,276
+Hair City,The Bastille - W Face > The Bastille > Eldorado Canyon SP > Boulder > Colorado,3.6,5.9+ R,3,277
+Frosted Flake,Cereal Buttress > Rumbling Bald > 1. Southern Mountains Region > North Carolina,3.6,5.9+,1,278
+Smoke Bluff Connection,Wall Area > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.6,5.10a,4,279
+Wherever I May Roam,(6) Northwest Face > (m) Smith Rock Group > Smith Rock > Central Oregon > Oregon,3.3,5.9,5,280
+Traitor Horn,West Face - Right Side > (g) West Face > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.4,5.8,4,281
+Pegasus,Main Walls > Cathole Mountain > Central Valley > Connecticut,3.6,5.8,1,282
+Sail Away,Hidden Tower > Real Hidden Valley > Hidden Valley Area > Joshua Tree National Park > California,3.5,-5.8,1,283
+Spiderman,(p) Spiderman Buttress > Smith Rock > Central Oregon > Oregon,3.5,5.7,2,284
+Ferrovieri,3. Second Buttress > Upper Meadow > Meadow River Gorge > The New River Gorge > West Virginia,3.6,5.7,1,285
+Stan's Crack,Sunset North > Sunset Park > Tennessee,3.6,5.8+,2,286
+El Camino Real,West Face - Right Side > (g) West Face > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.5,5.10a,4,287
+New Diversions,Ap. New Diversions > Lower Merced River Canyon > Yosemite Valley > Yosemite National Park > California,3.6,5.10a,2,288
+Boardwalk,Main Tier > Ship Rock > 2. Northern Mountains Region > North Carolina,3.6,5.8,2,289
+Baba Cool,Chopping Block > Chopping Block > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.6,5.9+,1,290
+Void of Form,Pontatoc Ridge > Pontatoc Canyon > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3.1,5.9,10,291
+South Face Route,J. North Dome > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.6,5.8,7,292
+Alice in Bucketland,Redgarden - Tower One > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.6,5.8+ R,2,293
+Generic Crack,Donnelly Canyon > Indian Creek > Southeast Utah > Utah,3.4,-5.1,1,294
+Flying & Drinking and Drinking & Driving,Upper Beer Wall > Beer Walls > B: Chapel Pond Pass > Adirondacks > New York,3.6,5.10a PG13,1,295
+Fantasy,M) Fantasy Area > Endless Wall > New River Gorge Proper > The New River Gorge > West Virginia,3.5,5.8,2,296
+Waves,Shipyard Rock > South Seas > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.6,5.8,2,297
+Inca Roads,Main Face > Royal Columns > Tieton River > South-Central & Yakima > Washington,3.6,5.9,1,298
+Robbins Crack,Robbins Boulder > Mount Woodson > North San Diego County > San Diego County > California,3.6,5.10a,1,299
+Diedre,The Diedre Area > *Cathedral Ledge > New Hampshire,3.5,5.10a,5,300
+Magnolia Thunderpussy,Middle Section > Granite Mountain > **Prescott Area > Central Arizona > Arizona,3.6,5.9,3,301
+Winds of Fire,Hard Rock > American Fork Canyon > Southern Wasatch > Wasatch Range > Utah,3.6,5.10a,1,302
+Middle Parallel Space,Nautilus > Vedauwoo > Wyoming,3.6,5.9,2,303
+Jolt,The Hinterlands > *Rumney > New Hampshire,3.5,5.10a,1,304
+Syke's Sickle,Spearhead > Glacier Gorge > RMNP - Rock > Alpine Rock > Colorado,3.4,5.9+,7,305
+Fruit Loops,Cereal Buttress > Rumbling Bald > 1. Southern Mountains Region > North Carolina,3.5,5.7+,2,306
+Breakfast of Champions,(C) Main Wall left side > Lower Town Wall > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.5,5.10a,1,307
+Modern Trad,First Cliff > Patricia Bowl > Rock Creek > Mammoth Lakes Area > Sierra Eastside > California,3.6,5.10a,1,308
+Southwest Corner,Petit Grepon > RMNP - Rock > Alpine Rock > Colorado,3.6,5.9,9,309
+Mental Physics,Lenticular Dome > West Wonderland Valley > Wonderland Valley > Wonderland South > Wonderland of Rocks > Joshua Tree National Park > California,3.4,5.7,2,310
+Bunny Slope,Critic's Choice > Indian Creek > Southeast Utah > Utah,3.6,5.9,1,311
+Flying Circus,Neat and Cool > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.6,5.10a,1,312
+Nutcracker,Barber Wall > *Cathedral Ledge > New Hampshire,3.6,5.10a,1,313
+Unconquerable Crack,Main Cliff > Ragged Mountain > Central Valley > Connecticut,3.6,5.9+,1,314
+Lava Haul,Flavin Haven > Upper Gorge > Owens River Gorge > Bishop Area > Sierra Eastside > California,3.6,5.10a,1,315
+Intimidation,Lower Blair III > Lower Blair I II III and vicinity > Blair (overview) > Vedauwoo > Wyoming,3.6,5.9+,1,316
+Northwest Corner (a.k.a. Boving-Pollack Route),North Early Winter Spire > Liberty Bell Group > Washington Pass > North Cascades > Hwy 20 and North Cascades National Park > Northwest Region > Washington,3.5,5.9,4,317
+Something Interesting,e. The Mac Wall (Something Interesting) > The Trapps > The Gunks > New York,3.5,5.7+,2,318
+The Underling,Eastern Sky Bridge Ridge > Northern Gorge > Red River Gorge > Kentucky,3.6,5.9,1,319
+Outside Corner,JHCOB Wall > Big Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.4,5.7,3,320
+Solid Gold,South Astro Dome - Northeast Face > South Astro Dome > The Astro Domes > West Wonderland Valley > Wonderland Valley > Wonderland South > Wonderland of Rocks > Joshua Tree National Park > California,3.5,5.10a/b,2,321
+Voyage of the Cowdog,(a) Picnic Lunch Wall > Smith Rock > Central Oregon > Oregon,3.3,5.8+,3,322
+Le Teton,f. The Guides' Wall (Madame G's) > The Trapps > The Gunks > New York,3.5,5.9+,1,323
+North Ridge,Montezuma Tower > Garden of the Gods > Colorado Springs > Colorado,3.5,5.7,2,324
+Dirty Pinkos,(u) Red Wall > Smith Rock > Central Oregon > Oregon,3.4,5.9+,4,325
+Teeny Face,i. High E > The Trapps > The Gunks > New York,3.6,5.10a,2,326
+Hackberry Crack,Walls Of Moria > West Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.6,5.9,1,327
+EGBG,Chocolate Factory > Bald Rock Fork Recreational Preserve (BRRP) > Red River Gorge > Kentucky,3.5,5.10a,1,328
+Arrow,h. The Arrow Wall - CCK > The Trapps > The Gunks > New York,3.5,5.8,2,329
+High Anxiety,Lower Mount Scott > Mount Scott > Wichita Mountains Wildlife Refuge > Oklahoma,3.6,5.7,1,330
+Touch and Go,Touch and Go Face > Echo Rock Area > Central Joshua Tree > Joshua Tree National Park > California,3.5,5.9,1,331
+Headstone Surfer,Funk Rock City > Northern Gorge > Red River Gorge > Kentucky,3.6,5.10a,1,332
+Post Moderate,Winter Wall > Diablo Canyon > Santa Fe Area > New Mexico,3.5,5.9,1,333
+Birdland,b. Gelsa to Moe (closure) > The Near Trapps > The Gunks > New York,3.5,5.8+,2,334
+Leopard Skin,Sand Dunes > Island In The Sky > Snow Canyon State Park > Saint George > Southwest Utah > Utah,3.3,5.7,4,335
+Pete's Farewell,Pitchoff Chimney Cliff > C: Keene Region > Adirondacks > New York,3.5,5.7,3,336
+Estrellita,Estrellita > La Cueva Canyon Upper > Sandia Mountains > Albuquerque Area > New Mexico,3.6,5.8,1,337
+Old Man,South Fin > 4 - Windy Point West > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3.6,5.9,1,338
+North Ridge,Steeple Peak > Deep Lake Area > Wind River Range > Wyoming,3.5,5.8,5,339
+Pistol Pete,Doc Holliday Wall > Central Pinnacles > Holcomb Valley Pinnacles > Big Bear City Area > Big Bear North > Big Bear Lake Area > San Bernardino Mountains > California,3.5,5.10a/b,1,340
+Backbone Ridge,Dragontail Peak > Stuart-Enchantments > Central-East Cascades Wenatchee & Leavenworth > Washington,3.4,5.9,12,341
+After The Fall,Green Adjective Gully > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.5,5.9,1,342
+Slip 'n Slide,Lower Elbow Room > Upper Gorge > Owens River Gorge > Bishop Area > Sierra Eastside > California,3.6,5.9,1,343
+Perversion,Mickey Mouse Wall > Eldorado Mountain > Boulder > Colorado,3.5,5.9,3,344
+Pogue Ethics,Phantasia > Northern Gorge > Red River Gorge > Kentucky,3.5,5.9+,1,345
+Dr. Rubo's Wild Ride,Summit Block Rock > Coffeepot Rock Area > West Sedona > Sedona Area > Northern Arizona > Arizona,3.5,5.9,4,346
+Climb and Punishment,Reynolds Hill > Vedauwoo > Wyoming,3.5,5.9+,1,347
+Isaiah,The Overlook > Oak Creek Canyon Overlook > Flagstaff Area > Northern Arizona > Arizona,3.6,5.9+,1,348
+Standard Route,Gallatin Tower > West Side > Gallatin Canyon > Southwest Region > Montana,3.5,5.8+,3,349
+God's Own Drunk,Khayyam Spire > Cathedral Spires > Custer State Park > South Dakota,3.6,5.9,2,350
+Sundike,Sunshine Face - Right Side > (k) Sunshine Face > Suicide Rock > Tahquitz & Suicide Rocks > California,3.6,5.10a,1,351
+Crescent Arch,West Face > Daff Dome > Daff Area > Tuolumne Meadows > Yosemite National Park > California,3.5,5.10a,5,352
+Sometime Crack,05: Pedestal Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.5,5.10a,1,353
+Turkey Foot Crack,Sunshine Wall > Cathedral Spires Area > South Platte > Colorado,3.5,5.10a,1,354
+Conan's Gonads (Conad's),Twin Owls > Lumpy Ridge > Estes Park Valley > Colorado,3.6,5.9,1,355
+Meteor,Left Wall > The Wedge > El Cajon Mountain > South San Diego County > San Diego County > California,3.4,5.8,4,356
+Exorcist,East Wall Inner (Exorcist Area) > Hall of Horrors > Hall of Horrors Area > Sheep Pass Area > Central Joshua Tree > Joshua Tree National Park > California,3.5,5.10a,1,357
+Flight of the Gumby,6. Butcher's Branch > Kaymoor > New River Gorge Proper > The New River Gorge > West Virginia,3.5,5.9+,1,358
+High Dive,Glass Ocean and Environs > Big Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.6,5.9+,2,359
+Long John Wall,West Ridge - part B - Long John to Verschneidung > The West Ridge > Eldorado Canyon SP > Boulder > Colorado,3.4,5.8,4,360
+Underdog,Main Cliff > *Rumney > New Hampshire,3.4,5.10a,1,361
+New Yosemite,Junkyard Wall > Junkyard Area > New River Gorge Proper > The New River Gorge > West Virginia,3.5,5.9,1,362
+Sliding Board,7. The Slabs > *Whitehorse Ledge > New Hampshire,3.5,5.7 R,9,363
+Maginot Line,Shortoff Mountain > Linville Gorge > 2. Northern Mountains Region > North Carolina,3.5,5.7,4,364
+Escape Artist,SOB Gully (skier's left side) > North Rim Routes > Black Canyon of the Gunnison > Gunnison > Colorado,3.4,5.10a,7,365
+West Face Variation Direct,(s) Monkey Face > Smith Rock > Central Oregon > Oregon,3.5,5.8,2,366
+Keep on Struttin',h. The Arrow Wall - CCK > The Trapps > The Gunks > New York,3.5,5.9+,3,367
+Batwings,Parking Lot Rock - West > Parking Lot Rock > City of Rocks > South Idaho > Idaho,3.5,5.8+,1,368
+Braille Book,5. Higher Cathedral Rock > P. Cathedral Area > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.4,5.8+,6,369
+East Face Left Side Cracks,Pingora > Cirque of the Towers > Wind River Range > Wyoming,3.4,5.7+,11,370
+Animal Cracker,Animal Cracker Rock > City of Rocks > South Idaho > Idaho,3.5,5.10a,2,371
+Groove Tube,Fire Wall > Tonsai Bay > Laem Phra Nang (Railay & Tonsai) > South - Islands & Beaches > Thailand > Asia > International,3.5,-5.9,2,372
+Orange Out Direct,The Overlook > Oak Creek Canyon Overlook > Flagstaff Area > Northern Arizona > Arizona,3.6,5.9,1,373
+Xanadu,West Ridge - part D - Xanadu to Pony Express > The West Ridge > Eldorado Canyon SP > Boulder > Colorado,3.5,5.10a,1,374
+Dead Man Walking,The Dihedrals > El Potrero Chico > Nuevo Leon > Mexico > North America > International,3.5,5.9,1,375
+Mrs. Field's Follies,01. Sandstonia > Bubba City > New River Gorge Proper > The New River Gorge > West Virginia,3.4,5.8,1,376
+The Wasteland,The Wasteland > East Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.4,5.8,6,377
+Black Orpheus,Black Orpheus Amphitheater > 12-Oak Creek Canyon > Red Rock > Southern Nevada > Nevada,3.3,5.9+,8,378
+Commitment,First Tier > Five Open Books > E. Yosemite Falls Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.4,5.9,3,379
+Trezlar,(q) Mesa Verde Wall > Smith Rock > Central Oregon > Oregon,3.5,5.10a,2,380
+The Classic,Middle Section > Granite Mountain > **Prescott Area > Central Arizona > Arizona,3.5,5.7+,3,381
+Passages,T-Wall East > The Tennessee Wall > Tennessee,3.5,5.8,1,382
+Rico Suave,3. Rico Suave Buttress > Kaymoor > New River Gorge Proper > The New River Gorge > West Virginia,3.5,5.10a,1,383
+Climbin' Punishment,Southern Pillar - West Side > Southern Pillar > Seneca Rocks > West Virginia,3.5,5.8+,3,384
+Bon Homme Variation,South and East Faces > Devils Tower > Wyoming,3.5,5.8,3,385
+Absinthe of Mallet,The Sheepshead > Sheepshead Area (Southwest) > West Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.4,-5.1,7,386
+Will the Wolf Survive?,Los Lobos Wall > Los Lobos Canyon > El Potrero Chico > Nuevo Leon > Mexico > North America > International,3.4,5.10a,4,387
+Coffin Nail,West Face - Right Side > (g) West Face > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.4,5.8,2,388
+Green Goblin,North Forty Routes > North Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.5,5.8,1,389
+Too Much Fun,Bumblie Rock > City of Rocks > South Idaho > Idaho,3.5,5.8,1,390
+Labyrinth,Reynolds Hill > Vedauwoo > Wyoming,3.5,5.9,2,391
+Long Time No See,The Apron > The Chief > Squamish > British Columbia > Canada > North America > International,3.3,5.9,9,392
+Casual Viewing,Global Village > Natural Bridge Region > Red River Gorge > Kentucky,3.5,5.7,1,393
+Lichen or Leave It,North Peak - East Face > Seneca Rocks > West Virginia,3.5,5.8,1,394
+Built to Tilt,Shortoff Mountain > Linville Gorge > 2. Northern Mountains Region > North Carolina,3.7,5.10a/b,3,395
+Inferno,Inferno - Atlantis Area > 2. South Buttress > *Whitehorse Ledge > New Hampshire,3.5,5.8,4,396
+Dufty's Popoff,Southeast Corner > South Peak - East Face > Seneca Rocks > West Virginia,3.5,5.7 PG13,1,397
+Mr. Clean,The Barkeater Cliff > C: Keene Region > Adirondacks > New York,3.5,5.8+,1,398
+Sidetrack,Sundance Buttress > Lumpy Ridge > Estes Park Valley > Colorado,3.5,5.9,6,399
+Three Star Salad Bar,Salad Bar > Denny East > Denny Cove > Tennessee,3.5,5.9,1,400
+Ruben,Jimmywood > Foster Falls > Tennessee,3.5,5.9,1,401
+West Pillar Direct,Eichorn Pinnacle > Cathedral Range > Tuolumne Meadows > Yosemite National Park > California,3.5,-5.1,5,402
+Riverboat Gambler,Above Anthrax > Necedah (Petenwell Bluff) > Central > Wisconsin,3.5,5.10a,1,403
+Crescendo,JHCOB Wall > Big Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.3,5.9,4,404
+Fantasia,Poland Hill > Vedauwoo > Wyoming,3.5,5.9,1,405
+Whiteout,Emerald City > Natural Bridge Region > Red River Gorge > Kentucky,3.5,5.8,2,406
+Mayflower,The Prow > Paradise Forks > Sycamore Canyon > Northern Arizona > Arizona,3.5,5.9,1,407
+South Buttress,Pingora > Cirque of the Towers > Wind River Range > Wyoming,3.4,5.8,4,408
+Pointy Little Devil,Shakers > Monster North > Magna Carta > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.5,5.8,1,409
+Red Rib,Hostess Gully - West Corridor > Castle Rocks > Castle Rocks > South Idaho > Idaho,3.5,5.10a,1,410
+Dr. Evil,Gotham City > Upper Gorge > Owens River Gorge > Bishop Area > Sierra Eastside > California,3.5,5.10a,1,411
+Swamp Rat,Cliffs of Insanity > East Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.5,5.8,1,412
+Guillotine,Otter Cliffs > -Acadia National Park > Maine,3.5,5.10a/b,1,413
+Deft Jam,Confederate Cracks > West Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.5,5.9,1,414
+Wiessner Face,Wiessner Wall > West Bluff 03 - Cleo Amphitheater > Devil's Lake > Baraboo Range > Wisconsin,3.5,5.7,1,415
+Paradise Alley,Shortoff Mountain > Linville Gorge > 2. Northern Mountains Region > North Carolina,3.5,5.8+,4,416
+"Disco Duck""Waterfront"," The > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah""",3.5,5.10a,1,417
+Sunset Streaks,Main Wall > Corte Madera > South San Diego County > San Diego County > California,3.4,5.10a,5,418
+Crying Time Again,Northwest Face > Lembert Dome > Tuolumne Meadows > Yosemite National Park > California,3.5,5.10a,4,419
+Toe Crack,Thin Air Face > *Cathedral Ledge > New Hampshire,3.4,5.7,2,420
+Tax Man,IRS Wall > Lost Horse Area > Joshua Tree National Park > California,3.5,5.10a,1,421
+Simians to the Sun,Watch Crystal > East  Animas > Durango > Colorado,3.5,5.9+,2,422
+Plumb Line,Plumb Line Crag > Vedauwoo > Wyoming,3.5,5.9+,1,423
+Linn Cove Lullaby,Main Tier > Ship Rock > 2. Northern Mountains Region > North Carolina,3.5,5.10a,2,424
+Crazy Alice,Zoo Wall > The Narrows > Wichita Mountains Wildlife Refuge > Oklahoma,3.5,5.8,1,425
+Thor,World Domination > Mondo Beyondo > Ten Sleep Canyon > Wyoming,3.5,5.10a,1,426
+Carter Classic,Davis Face > Buena Vista > Colorado,3.4,5.9,5,427
+Ga-stoned Again,The Gym > Shelf Road > Canon City > Colorado,3.5,5.9,1,428
+Dippy Diagonal,Lower Major Mass > 5.3 - Doorway Rocks - Major Mass > East Bluff 05 - Potholes Area > Devil's Lake > Baraboo Range > Wisconsin,3.5,5.7,1,429
+R.J. Gold,Sunset North > Sunset Park > Tennessee,3.5,5.9,1,430
+Silent Running,Three O'clock Rock > Darrington > Darrington and Mountain Loop Hwy > Northwest Region > Washington,3.4,-5.1,7,431
+Vertical Epic,Stone Wall > Pinnacles North > Holcomb Valley Pinnacles > Big Bear City Area > Big Bear North > Big Bear Lake Area > San Bernardino Mountains > California,3.5,5.10a,1,432
+Aurora Borealis,Black Bluff - N. Face (Right Side) > Black Bluff - North Face > Black Bluff > Mill Creek Road/Skyline Drive Area > Big Bear South > Big Bear Lake Area > San Bernardino Mountains > California,3.7,5.9,1,433
+Heart and Sole,Echo Rock - West Face > Echo Rock > Echo Rock Area > Central Joshua Tree > Joshua Tree National Park > California,3.5,5.10a,1,434
+Precious Orr,T-Wall East > The Tennessee Wall > Tennessee,3.5,-5.1,1,435
+New Era,East Face > Kindergarten Rock > Garden of the Gods > Colorado Springs > Colorado,3.4,5.7,2,436
+Turkey Shoot,Turkey Rock > Turkey Rocks > South Platte > Colorado,3.5,5.9,3,437
+East Face,Lexington Tower > Liberty Bell Group > Washington Pass > North Cascades > Hwy 20 and North Cascades National Park > Northwest Region > Washington,3.4,5.9+,10,438
+More Funky Than Gunky,Camel Jockey > Sinks Canyon > Lander Area > Wyoming,3.5,5.9,1,439
+Venom,A. Mr. Jimmy > A. North Canyon > *Jackson Falls > Illinois,3.5,5.10a,1,440
+The Black Rose,The Obsidian Wall > Paradise Forks > Sycamore Canyon > Northern Arizona > Arizona,3.5,5.8+,1,441
+Poison Ivy,Poison Ivy Wall > 6. The Throne > Sam's Throne > Sam's Throne & Surroundings > North-Central Arkansas > Arkansas,3.5,5.7+,1,442
+Waste Knot,Ephel Duath > Towers of Teeth > Middle Earth > Sylvan Lake > Custer State Park > South Dakota,3.8,5.8,1,443
+Mammalary Magic,1. Old Sandstone > East Bluff 01 - Sandstone Area > Devil's Lake > Baraboo Range > Wisconsin,3.5,5.10a R,1,444
+Direct South Ridge,Notchtop > RMNP - Rock > Alpine Rock > Colorado,3.4,5.9,7,445
+Number 6 a.k.a. The Bulge,Minnesota Strip > Interstate SP (Taylors Falls) > Minnesota,3.5,5.10a,1,446
+South Crack,Stately Pleasure Dome > Tuolumne Meadows > Yosemite National Park > California,3.4,5.8 R,6,447
+The Dike Route,Pywiak Dome > Tuolumne Meadows > Yosemite National Park > California,3.5,5.9 R,5,448
+Reef On It!,Upper Tan Corridor > Tan Corridor > Meadow Dome > Staunton Rocks > Staunton State Park > South Platte > Colorado,3.4,-5.1,1,449
+Screw,Valley Massif > Vedauwoo > Wyoming,3.5,5.7,2,450
+Squeeze Play,Cerberus Gendarme > Zion National Park > Southwest Utah > Utah,3.5,5.10a,1,451
+Orange Crush,The Far East > East Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.4,5.9+,1,452
+Psychedelic Tree,East Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.4,5.9,3,453
+Jamcrack,Sunnyside Bench > E. Yosemite Falls Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.4,5.9,2,454
+Swiss Arete,Mt. Sill > 09 - Palisades & Surrounding Peaks > High Sierra > California,3.4,5.7,6,455
+The West Chimney,The Eaglet > Hounds Hump Ridge (Eaglet etc) > WM: Franconia Notch > New Hampshire,3.4,5.7,3,456
+Bottomless Topless,1. North Face Main > North Face > Snowshed Wall > Donner Summit > I-80 Corridor > Lake Tahoe > California,3.4,5.10a,1,457
+Construction Job,Shortoff Mountain > Linville Gorge > 2. Northern Mountains Region > North Carolina,3.6,5.9,3,458
+Boilerplate,The Crossroads > Pendergrass-Murray Recreational Preserve (PMRP) > Red River Gorge > Kentucky,3.4,5.8,1,459
+Main Crack,Ed and Terry Wall > Rock Canyon > Southern Wasatch > Wasatch Range > Utah,3.5,5.7,1,460
+The 37th Cog in Melvin's Wheel aka Melvin's Wheel,The Bookmark > Lumpy Ridge > Estes Park Valley > Colorado,3.4,5.8,3,461
+Hairpin,Main Area Frontside > The Papoose > Shannon Falls > Squamish > British Columbia > Canada > North America > International,3.5,5.10a,5,462
+Key Hole,Interiors Wall Area > Escalante Canyon > Grand Junction Area > Colorado,3.4,5.10a/b,1,463
+Junco,Jimmy Cliff > *Rumney > New Hampshire,3.3,5.8+,1,464
+Angel's Arete,2 Bridge Buttress > Bridge Area > New River Gorge Proper > The New River Gorge > West Virginia,3.5,5.10a R,1,465
+Monday Morning Slab Harry Daley Route,5. Monday Morning Slab > I. Glacier Point Apron > Valley South Side > Yosemite Valley > Yosemite National Park > California,3.4,5.8,2,466
+Dangling Woo Li Master,Bighorn Mating Grotto > Diarrhea Dome > Central Wonderland > Wonderland South > Wonderland of Rocks > Joshua Tree National Park > California,3.5,5.10a,1,467
+Peter's Project,09: Many Pines Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.4,5.7,1,468
+Breakfast of Champions,South Astro Dome - Northeast Face > South Astro Dome > The Astro Domes > West Wonderland Valley > Wonderland Valley > Wonderland South > Wonderland of Rocks > Joshua Tree National Park > California,3.4,5.8+,2,469
+Nova Express,3. East Face Main > East Face > Snowshed Wall > Donner Summit > I-80 Corridor > Lake Tahoe > California,3.4,5.9+,1,470
+Never Never Land,g. V3 - Middle Earth > The Trapps > The Gunks > New York,3.4,5.10a,1,471
+Sentinel Crack,Sentinel Area > Interstate Park > Northwest > Wisconsin,3.5,5.10a,1,472
+The Dangler,e. The Mac Wall (Something Interesting) > The Trapps > The Gunks > New York,3.3,5.10a,1,473
+Community Pillar,North Face > Magic Mountain > 10-Pine Creek Canyon > Red Rock > Southern Nevada > Nevada,3.4,5.9,8,474
+Bombardment,Lower Left Wall / Ventilator Slabs > *Cathedral Ledge > New Hampshire,3.4,5.8,2,475
+Art,T-Wall East > The Tennessee Wall > Tennessee,3.4,5.8,1,476
+Death Flake from HELL,Wall of Denial > Ten Sleep Canyon > Wyoming,3.5,5.10a,1,477
+The Entertainer,Junkyard Wall > Junkyard Area > New River Gorge Proper > The New River Gorge > West Virginia,3.4,5.10a,1,478
+Fish and Chips,Creek Side > Clear Creek Canyon > Golden > Colorado,3.4,5.9+,1,479
+Return to Forever  - (mid-cliff START),The Precipice aka The South Wall > -Acadia National Park > Maine,3.5,5.9,1,480
+Andromeda Strain,Graining Fork Nature Preserve (a.k.a. Roadside Crag) > Natural Bridge Region > Red River Gorge > Kentucky,3.7,5.10a,1,481
+Jellyroll Arch,East Face > Grouse Slab > Donner Summit > I-80 Corridor > Lake Tahoe > California,3.4,5.8,2,482
+Roger's Roof,7.3 - Horse Rampart > East Bluff 07 - Railroad Tracks > Devil's Lake > Baraboo Range > Wisconsin,3.4,5.8+,1,483
+Sweet Sunday Serenade,Sunday Wall > The Access Fund Trailhead > Main Canyon: Unaweep Granite > Unaweep Canyon > Grand Junction Area > Colorado,3.4,5.9,3,484
+Wild Will's Arete,Area 13 - Left Side > Area 13 > Clark Canyon > Mammoth Lakes Area > Sierra Eastside > California,3.4,5.8,1,485
+Central Scrutinizer,Pebble Beach > Northern Gorge > Red River Gorge > Kentucky,3.5,5.9,1,486
+Ending Crack,Sespe Gorge (Black Wall) > Hwy 33/Ojai > Central Coast > California,3.4,5.7 PG13,2,487
+Good Times,Eastern Sky Bridge Ridge > Northern Gorge > Red River Gorge > Kentucky,3.5,5.8+,1,488
+Charybdis,17: Hawk's Nest > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.5,5.7,1,489
+Simple Suff,k. The Slime Wall > The Trapps > The Gunks > New York,3.4,5.10a/b,1,490
+Mr. Clean,Lower Mount Scott > Mount Scott > Wichita Mountains Wildlife Refuge > Oklahoma,3.4,5.8,1,491
+St. Vitus' Dance,The Apron > The Chief > Squamish > British Columbia > Canada > North America > International,3.3,5.9,5,492
+Werk Supp,The Bastille - N Face > The Bastille > Eldorado Canyon SP > Boulder > Colorado,3.4,5.9,2,493
+Blood Sweat and Chalk,Impact Zone > Main Wall > Franklin Gorge > West Virginia,3.4,5.9+,1,494
+Bee Line,Stronghold Dome > East Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.4,5.9 R,3,495
+Nutcracker 5.9 Start Variation,5. Manure Pile Buttress (aka Ranger Rock) > C. El Cap Picnic Area (Eagle Creek) > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.4,5.9,2,496
+The Second Coming,Muralla Grande > Chimney Canyon > Sandia Mountains > Albuquerque Area > New Mexico,3.4,5.8,4,497
+Turner's Flake,Thin Air Face > *Cathedral Ledge > New Hampshire,3.4,5.8,1,498
+Castor,Upper Broadway > South Peak - East Face > Seneca Rocks > West Virginia,3.4,5.10a,1,499
+The Guillotine,The Alcove > Echo Cliffs > Santa Monica Mountains > Los Angeles Basin > California,3.4,5.10a/b,1,500
+Ace of Spades,White Cliffs of Dover - Left Side > White Cliffs of Dover > Quail Springs Area > Joshua Tree National Park > California,3.4,5.9,1,501
+Party Time,Fortress Wall > Northern Gorge > Red River Gorge > Kentucky,3.4,5.7,2,502
+The Big Deal,PSOM Slab > Scheelite Crags / PSOM Slab > Pine Creek Canyon > Bishop Area > Sierra Eastside > California,3.3,5.9,4,503
+Pakistani Route,Big Black Face > Sunshine > Spearfish Canyon > South Dakota,3.4,5.9+,1,504
+Orbit,Snow Creek Wall > Snow Creek Area > Icicle Creek > Leavenworth > Central-East Cascades Wenatchee & Leavenworth > Washington,3.3,5.8+ PG13,7,505
+Strictly From Nowhere,d. Strictly - The Ceiling > The Trapps > The Gunks > New York,3.4,5.7,2,506
+Extreme Unction,Watchtower Main > The Watchtower > Ferguson Canyon > Central Wasatch > Wasatch Range > Utah,3.4,5.10a,1,507
+Young Warriors,South Face > Beacon Rock > Columbia Gorge > South-West & Tacoma > Washington,3.4,5.9,5,508
+Dappled Mare,Lost Horse Wall - Right Side > Lost Horse Wall > Lost Horse Area > Joshua Tree National Park > California,3.3,5.8,4,509
+Squid Kid,3. Trailhead Wall > Monitor Rock > Independence Pass > Colorado,3.4,5.10a,1,510
+Brinton's Direct,07: Brinton's Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.5,5.8+,1,511
+High Mountain Woody,Starr Wall > The Malamute > Squamish > British Columbia > Canada > North America > International,3.4,5.8+,1,512
+Valdez Overhang,Chopping Block > Chopping Block > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.4,5.9,1,513
+Prime Rib,Goat Wall > Mazama > Okanogan > Washington,2.8,-5.9,11,514
+Neat and Cool,Neat and Cool > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.4,5.10a,1,515
+Ragged Edge,Vesper Peak > Glacier Peak Wilderness > Darrington and Mountain Loop Hwy > Northwest Region > Washington,3.1,5.7,6,516
+Smokestack,New Wave > *Rumney > New Hampshire,3.4,5.9+,1,517
+Beckey's Wall,Beckey's Wall Area > Gate Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.3,5.7,3,518
+Airlie Gardens,Main Tier > Ship Rock > 2. Northern Mountains Region > North Carolina,3.7,5.9,2,519
+Grand Giraffe,Redgarden - Tower One > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.4,5.10a,5,520
+Prerequisite for Excellence,T-Wall East > The Tennessee Wall > Tennessee,3.4,5.8,1,521
+Diagonal,Combat Rock > Big Thompson Canyon > Estes Park Valley > Colorado,3.4,5.9,2,522
+Hand Crack (aka White Lightning),West Ridge - part D - Xanadu to Pony Express > The West Ridge > Eldorado Canyon SP > Boulder > Colorado,3.4,5.10a,1,523
+Wegetables I've Never Seen Before,l. Sleepy Hollow > The Trapps > The Gunks > New York,3.4,5.10a,1,524
+Dancing Outlaw,North Forty Routes > North Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.4,5.9+,1,525
+Centerpiece,Chimney Rock > 2 - Bear Canyon > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3.4,-5.1,1,526
+Half-A-Finger,Dihedrals Area > Gate Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.4,5.9+,1,527
+Pine Tree Eliminate,Airation Buttress > *Cathedral Ledge > New Hampshire,3.4,5.8+,1,528
+Wonderland,Pixie Corner > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.4,5.9,1,529
+Mother   1,Nautilus > Vedauwoo > Wyoming,3.4,5.7+,1,530
+Air Guitar,(c) King Pins > Sunshine Wall > Echo Basin > Frenchman Coulee AKA Vantage > Central Region > Washington,3.4,5.10a,1,531
+Octopus Garden in the Shade,Octopus Garden > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.3,5.8,1,532
+Scimitar,East Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.4,5.9 R,3,533
+Jawa Jam,Tatooine > Galaxy Area > Rock Canyon > Southern Wasatch > Wasatch Range > Utah,3.4,5.9,1,534
+Kingsnake,West Side > Winslow Wall > East Clear Creek > Winslow- Hwy’s 87 & 99 Corridors > Northern Arizona > Arizona,3.6,5.9+,1,535
+Comatose,Comatose Area > Rumbling Bald > 1. Southern Mountains Region > North Carolina,3.4,5.8,1,536
+Moby Dick,Whale Dome > West Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.3,5.8,6,537
+Popular Mechanics,White Cliffs of Dover - Left Side > White Cliffs of Dover > Quail Springs Area > Joshua Tree National Park > California,3.4,5.9,1,538
+Tigger,Gallatin Tower > West Side > Gallatin Canyon > Southwest Region > Montana,3.4,5.10a/b,2,539
+Plate Tectonics,Tectonic Wall > Muir Valley > Red River Gorge > Kentucky,3.3,5.10a,1,540
+Slim Pickins,The Spider's Web > B: Chapel Pond Pass > Adirondacks > New York,3.4,5.9+,1,541
+The Tree Route,2 Bridge Buttress > Bridge Area > New River Gorge Proper > The New River Gorge > West Virginia,3.4,5.10a,1,542
+Hidden Assets,T-Wall East > The Tennessee Wall > Tennessee,3.5,5.10a,1,543
+Annie Oh!,h. The Arrow Wall - CCK > The Trapps > The Gunks > New York,3.4,5.8+,2,544
+Friday's Folly,Third Flatiron > North > Flatirons > Boulder > Colorado,3.4,5.7,1,545
+West Pillar,Eichorn Pinnacle > Cathedral Range > Tuolumne Meadows > Yosemite National Park > California,3.4,5.9,5,546
+Divine Comedy,Dante's Wall > 03-First Pullout (Calico I) > Red Rock > Southern Nevada > Nevada,3.3,5.10a,1,547
+Bartleby -(Central Slab),The Precipice aka The South Wall > -Acadia National Park > Maine,3.4,5.8,1,548
+To Defy The Laws Of Tradition,Left Flank > Northern Gorge > Red River Gorge > Kentucky,3.3,5.10a,1,549
+Limelight,h. The Arrow Wall - CCK > The Trapps > The Gunks > New York,3.3,5.7,2,550
+Watermarks,2.  Balanced Rock Wall > East Bluff 06 - Balanced Rock > Devil's Lake > Baraboo Range > Wisconsin,3.4,5.8,1,551
+Absolutely Free Center,2. Lower Brother > D. Camp 4 Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.4,5.9,3,552
+5 Gallon Buckets,(g) Morning Glory Wall > Smith Rock > Central Oregon > Oregon,3.2,5.8,1,553
+Spooky, The Charlatan > The Needles > The Needles / Kern River > Western Sierra > California,3.3,5.9,2,554
+Aguja Celo Rey,Las Agujas (The Spires) > El Potrero Chico > Nuevo Leon > Mexico > North America > International,3.4,5.10a,2,555
+Black Dagger,Brownstone Wall > 11-Juniper Canyon > Red Rock > Southern Nevada > Nevada,3.3,5.8 PG13,6,556
+Golden Bucket,Foodbar Wall > Inner Walls > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.4,5.10a,1,557
+Ewephoria,The Sheepshead > Sheepshead Area (Southwest) > West Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.2,5.8,5,558
+The Seal,North Side > Looking Glass Rock > 1. Southern Mountains Region > North Carolina,3.4,5.10a/b,4,559
+Green Wall,South Peak West Face (Main Area) > South Peak - West Face > Seneca Rocks > West Virginia,3.3,5.7,3,560
+Psycho-Path,Psycho Tower > Big Gypsum - Dolores > Naturita and Paradox Valley > Colorado,3.7,5.9,3,561
+Lively Up Yourself,The Northern End > Trout Creek > Central Oregon > Oregon,3.4,-5.1,1,562
+Lost Ego,Sentinel Area > Interstate Park > Northwest > Wisconsin,3.4,5.8+,1,563
+Cryptic,Headstone Rock > Ryan Campground > Sheep Pass Area > Central Joshua Tree > Joshua Tree National Park > California,3.1,5.8,1,564
+Flakes,Ed and Terry Wall > Rock Canyon > Southern Wasatch > Wasatch Range > Utah,3.4,5.7,1,565
+Guide's Wall,Cascade Canyon > Grand Teton National Park > Wyoming,3.3,5.8,6,566
+The Tao (Previously known as D4),Davis Face > Buena Vista > Colorado,3.3,5.9+,6,567
+Double Helix (aka Rikert's Corner),Rose Ledge > Western MA > Massachusetts,3.4,5.9,1,568
+Horse d'Oeuvre (aka Pony Express P1 to Zip Code),West Ridge - part C - Pony Express to Long John > The West Ridge > Eldorado Canyon SP > Boulder > Colorado,3.4,5.9,1,569
+Marshall's Madness,South Peak West Face (Main Area) > South Peak - West Face > Seneca Rocks > West Virginia,3.4,5.9,3,570
+Pollux,Upper Broadway > South Peak - East Face > Seneca Rocks > West Virginia,3.4,5.10a,1,571
+Boltergeist,The Hideout > Muir Valley > Red River Gorge > Kentucky,3.3,5.10a/b,1,572
+Selam,Lower Virgin > Virgin Canyon > El Potrero Chico > Nuevo Leon > Mexico > North America > International,3.4,-5.1,1,573
+Pale Skinned Nebraskan (submitted as (Enter) Sandman),Jabba Buttress > East  Animas > Durango > Colorado,3.4,5.10a,1,574
+MRC Direct,Old Easy > Vedauwoo > Wyoming,3.4,5.9,2,575
+Wolf's Tooth,Twin Owls > Lumpy Ridge > Estes Park Valley > Colorado,3.4,5.8+,2,576
+Black Elk,Good Medicine Area > Ruth Lake > Uinta Mountains > Northeast Utah > Utah,3.4,5.10a,1,577
+Bitty Buttress,Bitty Buttress > Boulder Canyon > Boulder > Colorado,3.3,5.8+,3,578
+Celestial Groove,Pearly Gates > Snow Creek Area > Icicle Creek > Leavenworth > Central-East Cascades Wenatchee & Leavenworth > Washington,3.4,5.9+,1,579
+Call it a Knight,Ed and Terry Wall > Rock Canyon > Southern Wasatch > Wasatch Range > Utah,3.4,5.10a,1,580
+First Class,Funarama > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.4,5.8+,1,581
+Slot Machine,Bulletheads South > The Bulletheads > The Chief > Squamish > British Columbia > Canada > North America > International,3.4,5.8+,2,582
+Latch Key Kids,Whippoorwill > Summersville (Gauley River) Area > The New River Gorge > West Virginia,3.4,5.10a/b,1,583
+The Hot Zone,The Catacomb > The Monastery > Big Thompson Canyon > Estes Park Valley > Colorado,3.4,-5.9,1,584
+Calculus Crack,The Apron > The Chief > Squamish > British Columbia > Canada > North America > International,3.2,5.8,5,585
+Ritz Cracker,8) Ritz Cracker Area > Fern Buttress > New River Gorge Proper > The New River Gorge > West Virginia,3.4,5.9,2,586
+The Long Climb,(d) Northwest Recess > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.2,5.8,6,587
+Left Hand Crack,Left Hand > First Buttress > Taylor Canyon > Gunnison > Colorado,3.4,5.8+,1,588
+Touch and Go,1. Black Wall - Left > Black Wall > Donner Summit > I-80 Corridor > Lake Tahoe > California,3.4,5.9,4,589
+Wind Ridge,Wind Tower - SW Face > The Wind Tower > Eldorado Canyon SP > Boulder > Colorado,3.1,5.7,4,590
+Open Sesame,T-Wall East > The Tennessee Wall > Tennessee,3.4,5.8+,1,591
+Deface Crack,Bluff Street Cracks > Saint George > Southwest Utah > Utah,3.4,5.10a,1,592
+Touch 'N' Go,Redgarden - Tower Two > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.3,-5.9,1,593
+Sweat,News Wall > Main Dome > Enchanted Rock State Natural Area > Texas,3.3,5.7,1,594
+Apoplexy,a1. The Uberfall - left > The Trapps > The Gunks > New York,3.3,5.9,1,595
+Plum Pudding,Mid Wall > Middle Town Walls > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.4,5.9,1,596
+Star Dancer,Middle Marker Area > Marker > Magna Carta > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.4,5.8,1,597
+Johnny Vegas,Solar Slab - Lower Tier > 12-Oak Creek Canyon > Red Rock > Southern Nevada > Nevada,3.1,5.7,4,598
+Gandalf's Grip,(1) North Face > Broughton Bluff > Portland & The Gorge > Oregon,3.3,5.9+,3,599
+Canary,Upper Castle > Castle Rock > Tumwater Canyon > Leavenworth > Central-East Cascades Wenatchee & Leavenworth > Washington,3.3,5.8+,2,600
+Jam Exam,Orange Sunshine area > Royal Columns > Tieton River > South-Central & Yakima > Washington,3.4,5.9,1,601
+Cast In Stone,The Negativity Cave > The Benches > The Emeralds > Bowman/Emeralds > I-80 Corridor > Lake Tahoe > California,3.3,5.8,2,602
+El Cracko Diablo,South and East Faces > Devils Tower > Wyoming,3.2,5.8,2,603
+Shock and Awe,The Hideout > Muir Valley > Red River Gorge > Kentucky,3.4,5.7,1,604
+North Ridge of Matthes Crest,Matthes Crest > Cathedral Range > Tuolumne Meadows > Yosemite National Park > California,3.9,5.8,1,605
+Snake,The Apron > The Chief > Squamish > British Columbia > Canada > North America > International,3.3,5.9,5,606
+Mushroom,Main Area Frontside > The Papoose > Shannon Falls > Squamish > British Columbia > Canada > North America > International,3.4,5.9,1,607
+Battered Sandwich,Private Idaho > Lookout Point Area > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.3,5.9,1,608
+Peanuts To Serve You,Lookout Point > Lookout Point Area > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.4,5.9,1,609
+The Stretcher,05: Pedestal Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.4,5.9+,1,610
+Steel Crazy,Southeast Face > The Fortress > 8 - Summit Crags > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3.3,5.9,4,611
+Man Servant,Magoo Rock > East Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.4,5.9+,1,612
+Roseland,b. Gelsa to Moe (closure) > The Near Trapps > The Gunks > New York,3.3,5.9,3,613
+Metamorphosis,Armed and Dangerous (Main Cliff Left) > *Rumney > New Hampshire,3.3,5.8+,1,614
+Sweet Thin,Brownstone Wall > 11-Juniper Canyon > Red Rock > Southern Nevada > Nevada,3.4,5.9,7,615
+Pocket Puzzle,The Pond > Queen Creek Canyon > Central Arizona > Arizona,3.3,5.10a,1,616
+Alphonse,a. Beginning of cliff to Gelsa > The Near Trapps > The Gunks > New York,3.3,5.8,2,617
+Men in Tights,The Cinema > Take-Out Beach > River Road > Southeast Utah > Utah,3.3,5.10a,1,618
+West Buttress,The Bastille - W Face > The Bastille > Eldorado Canyon SP > Boulder > Colorado,3.3,5.10a,3,619
+Sundial Crack,Nose Area > Looking Glass Rock > 1. Southern Mountains Region > North Carolina,3.2,-5.8,4,620
+I Can't Believe It,Slabbage Patch > City of Rocks > South Idaho > Idaho,3.4,5.10a,1,621
+Stubborn Swede,E.  The Monument > C. Hidden Peaks > E. South Canyon > *Jackson Falls > Illinois,3.3,5.8,1,622
+The Viewing,Coffin Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.3,5.10a R,1,623
+Rockaholic,Lower Beer Wall > Beer Walls > B: Chapel Pond Pass > Adirondacks > New York,3.3,5.8,1,624
+Wheels on Fire,Green Adjective Gully > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.3,5.9,1,625
+High Strung,Foolproof Tower > West Wonderland Valley > Wonderland Valley > Wonderland South > Wonderland of Rocks > Joshua Tree National Park > California,3.3,5.9,1,626
+Tarantella,Lilly Bluff > Obed & Clear Creek > Tennessee,3.3,5.10a,1,627
+Rockwork Orange,Rockwork Orange Boulder > Mount Woodson > North San Diego County > San Diego County > California,3.3,5.10a,1,628
+YMC Route,Main Cliff > Ragged Mountain > Central Valley > Connecticut,3.3,5.9,1,629
+jasonbecker.com,The Bank > Shelf Road > Canon City > Colorado,3.3,-5.1,1,630
+Best Seat In The House,The Balcony > South Clear Creek > Obed & Clear Creek > Tennessee,3.3,5.9,1,631
+Lost Face Finger Crack,05: Lost Face Area > 1: Prospect Point Rampart > West Bluff 05 - West Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.5,5.7,1,632
+Dementia,Happy Hour Crag > Boulder Canyon > Boulder > Colorado,3.3,5.10a,1,633
+Dance of the Sugar-Plum Faeries,Shovel Point > Tettegouche SP (North Shore) > Minnesota,3.3,5.8,1,634
+Ginger Cracks,Ginger Buttress > 11-Juniper Canyon > Red Rock > Southern Nevada > Nevada,3.2,5.9,7,635
+Fun City,The Barkeater Cliff > C: Keene Region > Adirondacks > New York,3.3,5.7,1,636
+Anthill Direct,Redgarden - S Buttress > Redgarden Wall > Eldorado Canyon SP > Boulder > Colorado,3.3,5.9- R,5,637
+Damnation Crack,Upper Castle > Castle Rock > Tumwater Canyon > Leavenworth > Central-East Cascades Wenatchee & Leavenworth > Washington,3.3,5.9+,1,638
+Dave's Deviation,West Face - Left Side > (g) West Face > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.3,5.9,3,639
+Out of Sight,Out of Sight Boulder Area > Mount Woodson > North San Diego County > San Diego County > California,3.3,5.9,1,640
+Quarryman,Penny Lane > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.2,5.8,1,641
+Groovy Marcia!,I. The Ranch > E. South Canyon > *Jackson Falls > Illinois,3.3,5.9,1,642
+Pope's Crack,Echo Rock - South Face > Echo Rock > Echo Rock Area > Central Joshua Tree > Joshua Tree National Park > California,3.2,5.9,1,643
+Three Doves,h. The Arrow Wall - CCK > The Trapps > The Gunks > New York,3.3,5.8+,2,644
+Fantasy Ridge,The Bookmark > Lumpy Ridge > Estes Park Valley > Colorado,3.3,5.9 PG13,4,645
+Owl Crack,Triple Cracks Sanctuary > Echo Canyon > Enchanted Rock State Natural Area > Texas,3.3,5.8+,1,646
+Walk on the Wild Side,Saddle Rocks - Skirt  (West Face) > Saddle Rocks - Skirt > Saddle Rocks > Saddle Rocks Area > Sheep Pass Area > Central Joshua Tree > Joshua Tree National Park > California,3.1,5.8,3,647
+Chrysler Crack,Sandy Corridor > Parking Lot Area > 05-Sandstone Quarry > Red Rock > Southern Nevada > Nevada,3.8,5.9,1,648
+Clean Slate,2. Middle Area > Main Wall > Peaks Crag > San Francisco Peaks > Flagstaff Area > Northern Arizona > Arizona,3.3,5.9,1,649
+New Wave,East and Northeast Buttress Approach > Devils Tower > Wyoming,3.3,5.10a,2,650
+Squeeze My Lemon,Lizard Head Wall > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.3,5.7,1,651
+Rock n Rolla,Candy Land > Bowman Valley > Bowman/Emeralds > I-80 Corridor > Lake Tahoe > California,3.3,5.9,1,652
+Bird on a Wire,Lost Horse Wall - Right Side > Lost Horse Wall > Lost Horse Area > Joshua Tree National Park > California,3.3,5.10a,3,653
+Tilman's Arete,Tilman's Arete > B: Chapel Pond Pass > Adirondacks > New York,3.3,5.7,2,654
+Man on the Moon,Main Wall > Higher Solitude > Solitude Canyon > Mt. Elden Crags > Flagstaff Area > Northern Arizona > Arizona,3.2,-5.1,4,655
+Son of Belayer Slayer,Pub Wall > Central Gorge > Owens River Gorge > Bishop Area > Sierra Eastside > California,3.3,5.10a PG13,1,656
+Venusian Blind,Temple Crag > 09 - Palisades & Surrounding Peaks > High Sierra > California,3.1,5.7,13,657
+Surrealistic Pillar,Lower Buttress > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.1,5.7,3,658
+Frigid Air Buttress,Frigid Air Buttress > 09-Icebox Canyon > Red Rock > Southern Nevada > Nevada,3.2,5.9+,7,659
+Little Sheba,West Face of the Lamb > Lamb Dome > Tuolumne Meadows > Yosemite National Park > California,3.3,5.10a,1,660
+Beetle Byway,The Other Place (CLOSED) > South Side Crags (CLOSED) > Meadow River Gorge > The New River Gorge > West Virginia,3.3,5.8,1,661
+First Kiss,(t) Kiss of the Lepers Buttress > Smith Rock > Central Oregon > Oregon,3.2,5.7,5,662
+The Prow (Kit Carson),The Crestones > Sangre de Cristo Range > Alpine Rock > Colorado,3.7,5.8 R,1,663
+The Convict,The Maze  (aka Amaze-ing) > Vedauwoo > Wyoming,3.4,-5.9,1,664
+Crescent Crack,Crescent Crack Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,2.9,5.7,2,665
+Tunnel Vision,Angel Food Wall > 06-White Rock Spring > Red Rock > Southern Nevada > Nevada,3.1,5.7,6,666
+Winter Harvest,Reeds Creek > West Virginia,3.6,5.8,1,667
+Gorilla My Dreams,Winkie Dinkie Cliff > Middle Town Walls > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.3,5.10a,1,668
+All He's Ever Gonna Have,The Aspen Glade > Aspen Glade > Wild Iris > Lander Area > Wyoming,3.3,5.10a,1,669
+Room To Shroom,Room To Shroom Area > Barker Dam Area > Central Joshua Tree > Joshua Tree National Park > California,3.3,5.9,1,670
+Super Hands (aka Ranger Crack),Lower Falls Amphitheater > E. Yosemite Falls Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.2,5.8,1,671
+White Whale,Left Book > Lumpy Ridge > Estes Park Valley > Colorado,3.1,5.7,4,672
+Cottonmouth,Cotton Top > Cotton Hill > New River Gorge Proper > The New River Gorge > West Virginia,3.3,5.10a,1,673
+Bird's Nest,The North End > *Cathedral Ledge > New Hampshire,3.3,5.9,1,674
+Blue Runner,Fortress Wall > Northern Gorge > Red River Gorge > Kentucky,3.3,5.9 PG13,1,675
+Little Wing,Secret Garden > Miller Fork Recreational Preserve (MFRP) > Red River Gorge > Kentucky,3.3,5.9,1,676
+Eleventh Hour,Sundial > Big Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.2,5.8,4,677
+Intertwine,5. Main Face > Crow Hill > Crow Hill and Leominster Area > Central MA > Massachusetts,3.2,5.8,1,678
+Chihuahua Power,Lost Hawk > 2 - Bear Canyon > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3.2,5.9,1,679
+New Deviations,Ap. New Diversions > Lower Merced River Canyon > Yosemite Valley > Yosemite National Park > California,3.4,5.9,1,680
+Sideshow,Gong Show Wall > Rock Creek > Mammoth Lakes Area > Sierra Eastside > California,3.3,5.10a,1,681
+Super Slide,Western Royal Arches > Royal Arches > H. Royal Arches Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.2,5.9,5,682
+GM Route,The Country > The Country Area > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.2,5.9,3,683
+Wicker Cranium,Up Among the Firs > Murrin Park > Squamish > British Columbia > Canada > North America > International,3.3,5.9,1,684
+North Face Center,Cob Rock > Boulder Canyon > Boulder > Colorado,3.2,5.7+,2,685
+Lotta Balls,Lotta Balls Wall > 14-First Creek Canyon > Red Rock > Southern Nevada > Nevada,3.1,5.8,3,686
+Aftonroe,Take it for Granite > Mt. Cory > Banff National Park > Alberta > Canada > North America > International,3,5.7,8,687
+Delirium Tremens,Delirium Tremens > (w) The Marsupials > Smith Rock > Central Oregon > Oregon,3.8,5.10a/b,1,688
+Fool Effect,E) Kaymoor Slabs > Endless Wall > New River Gorge Proper > The New River Gorge > West Virginia,3.3,5.9,1,689
+Wheels on Fire Direct,Green Adjective Gully > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.3,5.10a,1,690
+Permanent Income Hypothesis,Right Side Gully > The Fortress > Hwy 33/Ojai > Central Coast > California,3.4,5.9,1,691
+Creature Feature,Phantasia > Northern Gorge > Red River Gorge > Kentucky,3.2,5.9,1,692
+Bong Bong Firecracker,The Sail > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.3,5.7+,1,693
+Cruising Lane,Funk Rock City > Northern Gorge > Red River Gorge > Kentucky,3.3,5.10a,1,694
+Nightstalker,Owl Rock > East Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.2,5.9,1,695
+Southeast Face,Clyde Minaret > 04 - Ritter & Minarets > High Sierra > California,3.7,5.8+,13,696
+Interiors,Interiors Wall Area > Escalante Canyon > Grand Junction Area > Colorado,3.2,5.8,1,697
+Excitable Boys,Muralla Grande > Chimney Canyon > Sandia Mountains > Albuquerque Area > New Mexico,3.3,5.9+,7,698
+The Arete,9. The Dream Wall > Echo Crag > WM: Franconia Notch > New Hampshire,3.5,5.8,1,699
+Upper Royal's Arch,West Face - Left Side > (g) West Face > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.2,5.8,1,700
+Amazing Face,Lower Tier > Boy Scout Rocks > Mount Diablo State Park > San Francisco Bay Area > California,3.2,5.10a,1,701
+Sunshine Buttress,(c) King Pins > Sunshine Wall > Echo Basin > Frenchman Coulee AKA Vantage > Central Region > Washington,3.2,5.10a,1,702
+George and Martha,(c) King Pins > Sunshine Wall > Echo Basin > Frenchman Coulee AKA Vantage > Central Region > Washington,3.2,5.10a,1,703
+Deviant,Cadillac Crag > Eldorado Canyon SP > Boulder > Colorado,3.2,5.10a,1,704
+Hotter Than Hell,Inferno - Atlantis Area > 2. South Buttress > *Whitehorse Ledge > New Hampshire,3.2,5.9,2,705
+The Squamish Butt Face,Squamish Buttress > The Chief > Squamish > British Columbia > Canada > North America > International,3.1,5.9,6,706
+Psycho Crack Right,m. Crevice right and Psycho Wall > Peterskill > The Gunks > New York,3.2,5.8,1,707
+Animation,Lower Animal World > Animal World > Boulder Canyon > Boulder > Colorado,3.1,5.8,1,708
+Jefferson Airplane,Sunset North > Sunset Park > Tennessee,3.4,5.10a,1,709
+Strawberry Jam,Crystal Freeway > Vedauwoo > Wyoming,3.5,5.8,2,710
+Thin Air,Koala Rock > (w) The Marsupials > Smith Rock > Central Oregon > Oregon,3.2,5.10a,3,711
+Plumb Line,Plumb Line Gully > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.2,5.10a,1,712
+Prepackaged,Hemingway Buttress (East Face Left) > Hemingway Buttress > Lost Horse Area > Joshua Tree National Park > California,3.2,5.10a,1,713
+Chouinard's Crack (1st Half Pitch of Peking),(u) Red Wall > Smith Rock > Central Oregon > Oregon,3.2,-5.9,1,714
+Haystack,East Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.1,5.8,4,715
+Edge of a Dream,Upper Tier > Ship Rock > 2. Northern Mountains Region > North Carolina,3.2,5.7,1,716
+Mouse's Misery,08: Two Pines Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.2,5.10a R,1,717
+Brown Eyed Girl,Chica Bonita Wall > Pendergrass-Murray Recreational Preserve (PMRP) > Red River Gorge > Kentucky,3.2,5.10a,1,718
+Pull My Finger,Stoned Wheat Thin Cliff > Main Island > Clark Canyon > Mammoth Lakes Area > Sierra Eastside > California,3.3,5.10a,3,719
+Rat's Ass,South Side > Looking Glass Rock > 1. Southern Mountains Region > North Carolina,3.2,5.8+,3,720
+"Paha   Sapa aka ""Chockstoned""",[Redacted] > The Mohican > Spearfish Canyon > South Dakota,3.2,5.9,1,721
+Lost in Space Direct,Sheep's Nose > West Creek > South Platte > Colorado,3.2,5.9,4,722
+High Test,Upper Broadway > South Peak - East Face > Seneca Rocks > West Virginia,3.8,5.9+,1,723
+Final Link,Crescent Crack Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.2,5.9,1,724
+Birch Tree Crack,05: Pedestal Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.2,5.8,1,725
+Red Rider,3. Saddle Tramp > 2. Central (Blooming Rose Claim Jumper Saddle Tramp) > OK Corral > Wild Iris > Lander Area > Wyoming,3.2,5.10a,1,726
+Send Me on My Way,Bruise Brothers Wall > Muir Valley > Red River Gorge > Kentucky,3.2,-5.9,1,727
+Le Petit Arbre,Lower Blair I > Lower Blair I II III and vicinity > Blair (overview) > Vedauwoo > Wyoming,3.2,5.8,2,728
+Fingertrip Variation,Beckey's Wall Area > Gate Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.3,5.8+ PG13,1,729
+Wrinkles in Time,Dream Dome > Upper Dream Canyon > Boulder > Colorado,3.2,-5.9,2,730
+Bugs Bunny,The Bunny Slope > Sunshine > Spearfish Canyon > South Dakota,3.2,5.8,1,731
+Loose Lady,Houser Buttress > Houser Buttress Area > Real Hidden Valley Vicinity > Real Hidden Valley > Hidden Valley Area > Joshua Tree National Park > California,3.2,5.10a,1,732
+Recollections of Pacifica -(Central Slab),The Precipice aka The South Wall > -Acadia National Park > Maine,3.2,5.9,1,733
+Saturated,Jimmywood > Foster Falls > Tennessee,3.1,5.8,1,734
+Lost Face Overhangs I & II,05: Lost Face Area > 1: Prospect Point Rampart > West Bluff 05 - West Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.6,5.8,1,735
+Tennessee,Rose Ledge > Western MA > Massachusetts,3.3,-5.1,1,736
+Gemini Crack,South Side > Looking Glass Rock > 1. Southern Mountains Region > North Carolina,3.2,5.8,2,737
+Finally,Nautilus > Vedauwoo > Wyoming,3.2,5.9,1,738
+West Ridge,Paisano Pinnacle > Silver Star and Wine spires > Washington Pass > North Cascades > Hwy 20 and North Cascades National Park > Northwest Region > Washington,3.1,5.8+,8,739
+Black Magic,Lotta Balls Wall > 14-First Creek Canyon > Red Rock > Southern Nevada > Nevada,3.1,5.8,4,740
+Rat Stew,Bruise Brothers Wall > Muir Valley > Red River Gorge > Kentucky,3.2,5.10a,1,741
+Cold September Corner,Sunnyside Crags > 09-Icebox Canyon > Red Rock > Southern Nevada > Nevada,3.2,5.8,1,742
+The Flake,Intersection Rock > Hidden Valley Campground > Hidden Valley Area > Joshua Tree National Park > California,3.2,5.8,1,743
+Colorado Northeast Ridge,Kingfisher > Fisher Towers > Southeast Utah > Utah,3.1,5.8 C2,1,744
+Endeavor,White's Ledge > WM: Bartlett / Jackson Area > New Hampshire,3.2,5.7,7,745
+West Crack,Owl Rock > Arches National Park > Southeast Utah > Utah,3,5.8,1,746
+South East Corner,South Face > Beacon Rock > Columbia Gorge > South-West & Tacoma > Washington,3.1,5.7,6,747
+Colorado Crack,Conan's Corridor > Jumbo Rock Area > Pinto Basin > Joshua Tree National Park > California,3.2,5.9,1,748
+Purblind Pillar,Angel Food Wall > 06-White Rock Spring > Red Rock > Southern Nevada > Nevada,3.1,5.8,6,749
+Columbian Crack,Elephant Rock - East > Elephant Rock > City of Rocks > South Idaho > Idaho,3.1,5.7,1,750
+Steppenwolf,Turkey Perch > Turkey Rocks > South Platte > Colorado,3.2,5.9,1,751
+Panty Raid,Panty Wall > 03-First Pullout (Calico I) > Red Rock > Southern Nevada > Nevada,3.2,5.10a,1,752
+Sticky Revelations,Prophesy Wall > Saint George > Southwest Utah > Utah,3.1,5.10a,3,753
+Party in Your Pants,(e) Near End (aka Twin Cracks Area) > Sunshine Wall > Echo Basin > Frenchman Coulee AKA Vantage > Central Region > Washington,3.2,5.8,1,754
+Nirvana,Nirvana Buttress > Boynton Canyon > Dry Creek Road Area > West Sedona > Sedona Area > Northern Arizona > Arizona,3.4,5.9,3,755
+Aries (aka The Lizard),(A) Great Northern Slab > Lower Town Wall > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.1,5.8+,5,756
+Fallout,Coke Bottle > Vedauwoo > Wyoming,3.2,5.9,1,757
+Spontaneous Conga Line,The Draw Pile. > Crags Against Humanity > 1 -  Lower Highway > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,2.5,5.8,1,758
+She got the Bosch I got Drilled,Orange Oswald Wall > Summersville Lake (main) > Summersville (Gauley River) Area > The New River Gorge > West Virginia,3.2,5.10a,1,759
+Black Gold,Creek Side > Clear Creek Canyon > Golden > Colorado,2.9,5.7,5,760
+Serpentine,(m) The Weeping Wall > Suicide Rock > Tahquitz & Suicide Rocks > California,3.2,5.9,3,761
+Angel's Delight,The Overlook > Oak Creek Canyon Overlook > Flagstaff Area > Northern Arizona > Arizona,3.2,-5.8,1,762
+Birthday Crack,7.2.1 - Birthday Rocks > East Bluff 07 - Railroad Tracks > Devil's Lake > Baraboo Range > Wisconsin,3.2,5.7+,1,763
+Cocopuss,Coco Crag > 01-Calico Basin > Red Rock > Southern Nevada > Nevada,3.2,-5.1,1,764
+Over Easy,Middle Spire > Phantom Spires > Highway 50 Corridor > Lake Tahoe > California,3.2,5.7,1,765
+The Young and the Rackless,Upper East Face > East Blob > Blob Rock Area > Boulder Canyon > Boulder > Colorado,2.9,5.9,4,766
+Fine Nine,D. Lovely Tower > C. North Falls > *Jackson Falls > Illinois,3.2,5.9,1,767
+Thin Slabs / Thin Slabs Direct,g. V3 - Middle Earth > The Trapps > The Gunks > New York,3.1,5.7+,3,768
+Bushwhack Crack,Schoolroom Area > Gate Buttress > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.1,5.8,2,769
+Alcoa Presents,Upper Broadway > South Peak - East Face > Seneca Rocks > West Virginia,3.2,5.8,1,770
+Orgasm,12: Rainy Wednesday Tower > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.2,5.8,1,771
+P-Crack,P-Wall > Bishop Peak > San Luis Obispo > Central Coast > California,3.2,-5.9,1,772
+The Mutt and Jeff,The Wedge > Humbug Spires > Southwest Region > Montana,3.7,5.8,5,773
+Pony Express,West Face > Sugarloaf > Sugarloaf Area > Highway 50 Corridor > Lake Tahoe > California,3.2,5.8,2,774
+Potash Bong Hit,Wall Street > Potash Road > Southeast Utah > Utah,3,5.9+,1,775
+Back in Time,Necromancer Wall > 09-Icebox Canyon > Red Rock > Southern Nevada > Nevada,3.6,5.10a,1,776
+Aqua Knobby,Pywiak Dome > Tuolumne Meadows > Yosemite National Park > California,3.2,5.9 PG13,4,777
+Classic Crack,Eight-Mile Rock > Eight Mile Area > Icicle Creek > Leavenworth > Central-East Cascades Wenatchee & Leavenworth > Washington,3.1,5.8+,1,778
+V-3,g. V3 - Middle Earth > The Trapps > The Gunks > New York,3.1,5.7,3,779
+Sheer Stress,(3) Red Wall > Broughton Bluff > Portland & The Gorge > Oregon,3.2,5.10a,2,780
+Selaginella,Second Tier > Five Open Books > E. Yosemite Falls Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.1,5.8,4,781
+Arachnid Traction,The Creature Wall > B: Chapel Pond Pass > Adirondacks > New York,3.2,5.8,1,782
+Jubilant Song,South Face > 18-Windy Peak > Red Rock > Southern Nevada > Nevada,3.1,5.8,8,783
+Earthbound Misfit,A. The Gallery > B. West Falls > *Jackson Falls > Illinois,3.2,5.10a,1,784
+Catapult,Lower Castle > Castle Rock > Tumwater Canyon > Leavenworth > Central-East Cascades Wenatchee & Leavenworth > Washington,3.2,5.8,2,785
+Eight Flake,Dr. Seuss / Prototype Wall > Reimers Ranch > Austin Area > Texas,3.1,5.8,1,786
+Farley,East Face > Sugarloaf > Sugarloaf Area > Highway 50 Corridor > Lake Tahoe > California,3.2,5.9,1,787
+Totally Flaked,Head Shop Wall > The Mohican > Spearfish Canyon > South Dakota,3.2,5.10a,1,788
+Atman,Yin and Yang Cliff > Kraft Mountain Area > 01-Calico Basin > Red Rock > Southern Nevada > Nevada,3.1,5.10a,1,789
+[Redacted],Walls Of Moria > West Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.2,5.10a,1,790
+Wendy's Arete,Whippoorwill > Summersville (Gauley River) Area > The New River Gorge > West Virginia,3.1,5.7,1,791
+After Seven,5. Manure Pile Buttress (aka Ranger Rock) > C. El Cap Picnic Area (Eagle Creek) > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.1,5.8,1,792
+Backflip,The Bookmark > Lumpy Ridge > Estes Park Valley > Colorado,3.1,-5.9,4,793
+Solitaire,Borneo > South Seas > Mount Rushmore National Memorial > The Needles Of Rushmore > South Dakota,3.2,5.7,1,794
+Heart of the Sun,Great Wall of China > Central Gorge > Owens River Gorge > Bishop Area > Sierra Eastside > California,3.1,5.9,1,795
+The Gobbler,Black Velvet Wall > 16-Black Velvet Canyon > Red Rock > Southern Nevada > Nevada,3.2,-5.1,3,796
+Couldn't be Schmooter,Winter Heat Wall > Kraft Mountain Area > 01-Calico Basin > Red Rock > Southern Nevada > Nevada,3.2,-5.9,1,797
+North Face,Lone Eagle Peak > Indian Peaks > Alpine Rock > Colorado,3,5.7,11,798
+Head Over Heals,Hemingway Buttress (East Face Right) > Hemingway Buttress > Lost Horse Area > Joshua Tree National Park > California,3.2,5.10a,1,799
+Left Handed Jew,Turkey Perch > Turkey Rocks > South Platte > Colorado,3.1,5.7+,1,800
+Scream Cheese,Anteater - West > Anteater Rock > City of Rocks > South Idaho > Idaho,3.1,5.9,1,801
+Private Idaho,Bath Rock - West > Bath Rock > City of Rocks > South Idaho > Idaho,3.1,5.9,1,802
+Fantasia,East Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.6,5.9 R,3,803
+Positively 4th Street,2. Lower Brother > D. Camp 4 Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.2,5.9,2,804
+Retaliation,Barber Wall > *Cathedral Ledge > New Hampshire,3.1,5.9,3,805
+Ugly Fat Mean Come to Mammoth Be a Queen,Area 13 - Left Side > Area 13 > Clark Canyon > Mammoth Lakes Area > Sierra Eastside > California,3.1,5.7,1,806
+The Tooth Fairy,Summer-Fall (rock) > The Tooth > Snoqualmie Pass Area > Central-West Cascades & Seattle > Washington,3.1,5.9,6,807
+Chockstone,2 Bridge Buttress > Bridge Area > New River Gorge Proper > The New River Gorge > West Virginia,3.2,5.9+,1,808
+Sunset Slab,(7) Flounder and Cod Rock > (m) Smith Rock Group > Smith Rock > Central Oregon > Oregon,3.2,5.9,1,809
+Five Finger Discount,Graining Fork Nature Preserve (a.k.a. Roadside Crag) > Natural Bridge Region > Red River Gorge > Kentucky,3.2,5.8,1,810
+Gruff,(2) Wildfire Wall > West Side > (z) Lower Gorge > Smith Rock > Central Oregon > Oregon,3.2,5.10a,1,811
+Insuhlation,i. High E > The Trapps > The Gunks > New York,3.1,5.9,2,812
+African Herbman,North Forty Routes > North Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.2,5.8,1,813
+Geisha Girl,01. Sandstonia > Bubba City > New River Gorge Proper > The New River Gorge > West Virginia,3.1,5.8,1,814
+Mystery Achievement,Super Hits - Bloody Fingers > Breadloaves > City of Rocks > South Idaho > Idaho,3.1,5.7,1,815
+Mosquito,Wall Area > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.1,5.8,1,816
+Tower Route,Y-Crack Wall > Necedah (Petenwell Bluff) > Central > Wisconsin,3.1,5.10a,1,817
+The Howling,The Warlock > The Needles > The Needles / Kern River > Western Sierra > California,3.1,5.10a PG13,2,818
+Ragged Edges,Ragged Edges Area > 07-Willow Spring > Red Rock > Southern Nevada > Nevada,3.1,5.8,2,819
+Special K,K Cliff > The Side Walls > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.2,5.8,1,820
+Open Book,Disappointment Peak > Grand Teton National Park > Wyoming,3.5,5.9,6,821
+Old Milwaukee Road,Deception Wall > Deception Crags > Exit 38 > North Bend & Vicinity > Central-West Cascades & Seattle > Washington,3.1,5.10a,1,822
+Broadway,Main Cliff > Ragged Mountain > Central Valley > Connecticut,3.1,5.8,1,823
+La Vaca Peligrosa,2. La Vaca > 3. Right Side (Diamonds La Vaca Pronghorn Rodeo Drive) > OK Corral > Wild Iris > Lander Area > Wyoming,3.1,5.8,1,824
+Mockery,Au. Five and Dime Cliff > Lower Merced River Canyon > Yosemite Valley > Yosemite National Park > California,3.1,5.8,1,825
+Crynoid Corner,Cactus Cliff > Shelf Road > Canon City > Colorado,3.1,5.7,1,826
+Tasting Time,Indecent Exposure > Blue Sky > Spearfish Canyon > South Dakota,3.4,5.10a,1,827
+Sex Party,Middle East Wall > Frenchman Coulee > Frenchman Coulee AKA Vantage > Central Region > Washington,3.1,5.10a,1,828
+Out of Gas,Eavesdown Docks > Serenity > American Fork Canyon > Southern Wasatch > Wasatch Range > Utah,3.1,5.9,1,829
+Unfinished Concerto,South Side > Looking Glass Rock > 1. Southern Mountains Region > North Carolina,3.1,5.9+,3,830
+LaCholla Jackson,Cactus Cliff > Shelf Road > Canon City > Colorado,3.1,5.8+,1,831
+Right Toilet Bowl Crack,Temple of Sinawava > Zion National Park > Southwest Utah > Utah,3.1,5.10a,5,832
+Mister Masters,Sunnyside Crags > 09-Icebox Canyon > Red Rock > Southern Nevada > Nevada,3.2,5.9+,1,833
+Masterpiece,Bonsai > *Rumney > New Hampshire,3.1,5.10a,1,834
+R-4,Rupley Towers > 3 - Windy Point East > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3.5,5.9,1,835
+Thing In Between,Gallatin Tower > West Side > Gallatin Canyon > Southwest Region > Montana,3.2,5.9,1,836
+Manic Impression,Funk Rock City > Northern Gorge > Red River Gorge > Kentucky,3.1,5.10a,1,837
+Ricochet,Pistol Whipped Wall > Central Pinnacles > Holcomb Valley Pinnacles > Big Bear City Area > Big Bear North > Big Bear Lake Area > San Bernardino Mountains > California,3.1,5.10a,1,838
+The Burn,Southwest Corner > South Peak - West Face > Seneca Rocks > West Virginia,3.1,5.8,2,839
+West Country,Stately Pleasure Dome > Tuolumne Meadows > Yosemite National Park > California,3,5.7,4,840
+Key Lime Sky,Oxygen Wall > Right Fork > Maple Canyon > Central Utah > Utah,3.1,5.8,1,841
+The Great Chasm,The Great Chasm > Middle Fork > Maple Canyon > Central Utah > Utah,3.1,5.7,3,842
+V3,Cadillac Crag > Eldorado Canyon SP > Boulder > Colorado,3.1,5.8,1,843
+Reggae,Wind Tower - SW Face > The Wind Tower > Eldorado Canyon SP > Boulder > Colorado,3.1,5.8,2,844
+Environmental Impact,Pebble Beach > Northern Gorge > Red River Gorge > Kentucky,3.1,5.7,2,845
+Craig's Crack,Limbo Area > Mission Gorge > South San Diego County > San Diego County > California,3.1,5.8,1,846
+Second Coming,South Side > Looking Glass Rock > 1. Southern Mountains Region > North Carolina,3,5.7,2,847
+Byrd's Classic,Byrd's > East  Animas > Durango > Colorado,3.3,5.8,2,848
+Lunchmoney,Lower Capitalist Crag > Capitalist Crag > Clear Creek Canyon > Golden > Colorado,3.1,5.9+,1,849
+Excalibur,Ivory Tower > El Toro (The Front Side) > El Potrero Chico > Nuevo Leon > Mexico > North America > International,3.1,-5.1,6,850
+Handcrack-a-rete,The Coliseum > South Fork of St. Vrain Canyon > St. Vrain Canyons > Lyons > Colorado,3.1,5.7,2,851
+Oby-won Ryobi,Darth Vader > *Rumney > New Hampshire,3.1,5.9+,1,852
+The World's Toughest Milkman,The Milkman's Wall > Murrin Park > Squamish > British Columbia > Canada > North America > International,3.1,5.8+,1,853
+Emerald City,Rincon - L of Center Route > Rincon > Eldorado Canyon SP > Boulder > Colorado,3.1,5.9,1,854
+The Surprise,First Tier > Five Open Books > E. Yosemite Falls Area > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.1,5.10a,3,855
+30 Seconds Over Potash,Wall Street > Potash Road > Southeast Utah > Utah,3,5.8+,1,856
+Machine Gun Jumblies,Gotham City > Upper Gorge > Owens River Gorge > Bishop Area > Sierra Eastside > California,3.1,5.10a,1,857
+Chicken Delight,Barber Wall > *Cathedral Ledge > New Hampshire,3.1,5.9,1,858
+Karate Crack,(k) The Dihedrals > Smith Rock > Central Oregon > Oregon,3.1,5.10a,1,859
+Topless Twins,Brass Wall > 10-Pine Creek Canyon > Red Rock > Southern Nevada > Nevada,3.1,5.9,1,860
+After Six,5. Manure Pile Buttress (aka Ranger Rock) > C. El Cap Picnic Area (Eagle Creek) > Valley North Side > Yosemite Valley > Yosemite National Park > California,2.9,5.7,5,861
+Rainbow Buttress,Eagle Wall > 12-Oak Creek Canyon > Red Rock > Southern Nevada > Nevada,3.1,5.8+,8,862
+Black Lung,Barber Wall > *Cathedral Ledge > New Hampshire,3.1,5.8,1,863
+Made In The Shade,The Canal Zone > Clear Creek Canyon > Golden > Colorado,3,-5.9,1,864
+Chicago,07: Brinton's Buttress > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.1,5.9 R,1,865
+Traffic Jam,South Peak West Face (Main Area) > South Peak - West Face > Seneca Rocks > West Virginia,3.3,5.7+,1,866
+Toxxxic Entertainment,Spiney Ridge > Shelf Road > Canon City > Colorado,3.1,5.10a,1,867
+Higher Stannard,e. The Mac Wall (Something Interesting) > The Trapps > The Gunks > New York,3.1,-5.9,3,868
+Water into Wine,The Waterfall Walls > Old Road Crags > Ten Sleep Canyon > Wyoming,3.1,5.9,1,869
+Lion's Jaw,(g) Morning Glory Wall > Smith Rock > Central Oregon > Oregon,3.1,5.8,1,870
+Mineral Museum,The Crystal Tower > Clear Creek Canyon > Golden > Colorado,3.1,5.9,1,871
+True Grit,Grit Wall > Nine Mile Hill > Unaweep Canyon > Grand Junction Area > Colorado,3.1,5.8,1,872
+The Rose,F - North End > Upper West > Bolton Area > 1. Northern Vermont > Vermont,4,5.10a,1,873
+Crackerjack,Table Rock > Linville Gorge > 2. Northern Mountains Region > North Carolina,3.1,5.8,2,874
+Big Time,Castle Rock - South Face > Castle Rocks > Castle Rocks > South Idaho > Idaho,3.1,5.7,4,875
+The Pulpit,Stone Mountain South Face > Stone Mountain > 3. Piedmont Region > North Carolina,3.1,5.8,5,876
+Dos Chi Chis,Siberia > Outer Mongolia > The Middle Kingdom > Wonderland North > Wonderland of Rocks > Joshua Tree National Park > California,3.1,5.10a,2,877
+Overseer,Hemingway Buttress (East Face Left) > Hemingway Buttress > Lost Horse Area > Joshua Tree National Park > California,3.1,5.9,1,878
+The Great Circle,South Flank > Daff Dome > Daff Area > Tuolumne Meadows > Yosemite National Park > California,3.1,5.10a,2,879
+Rock Candy,Rock Garden Valley - Left Side > Rock Garden Valley > Lost Horse Area > Joshua Tree National Park > California,3.1,5.9+,1,880
+Sensuous Mortician,Necromancer Wall > 09-Icebox Canyon > Red Rock > Southern Nevada > Nevada,3.1,5.9,1,881
+Carey Corner,Main Cliff > Ragged Mountain > Central Valley > Connecticut,3.1,5.8,1,882
+Moon Goddess Arete,Temple Crag > 09 - Palisades & Surrounding Peaks > High Sierra > California,3,5.8,18,883
+Razor Worm,T-Wall East > The Tennessee Wall > Tennessee,3.1,5.8+,1,884
+Coyotes at Sunset,Coyote Crag > Central Pinnacles > Holcomb Valley Pinnacles > Big Bear City Area > Big Bear North > Big Bear Lake Area > San Bernardino Mountains > California,3.1,5.8,1,885
+Curving Crack,1. Old Sandstone > East Bluff 01 - Sandstone Area > Devil's Lake > Baraboo Range > Wisconsin,3.1,5.8,1,886
+One Dead Teardrop,Wonder Wall > El Potrero Chico > Nuevo Leon > Mexico > North America > International,3.1,5.9,1,887
+B-B-Buttress,The Northwest Territories > *Rumney > New Hampshire,3.1,5.9+,1,888
+Funky Bolt,Parking Lot Rock - East > Parking Lot Rock > City of Rocks > South Idaho > Idaho,3,5.9 R,1,889
+One Summer's Eve,Garden of Eden Wall (Pool Area) > Cascade Canyon > Durango > Colorado,3.1,5.9,1,890
+Mickey Mantle,Smooth Sole Wall - Right Side > (h) Smooth Sole Walls > Suicide Rock > Tahquitz & Suicide Rocks > California,3.4,5.8 R,1,891
+Crack Parallel,West Face (The Pinnacle West Face) > North Cheyenne Canyon > Colorado Springs > Colorado,3.1,5.7+,2,892
+The Misunderstanding,North Face > Whiskey Peak > 16-Black Velvet Canyon > Red Rock > Southern Nevada > Nevada,3.1,5.9,2,893
+Empor,Cob Rock > Boulder Canyon > Boulder > Colorado,3,5.7+,3,894
+Superior Crack,Palisade Head > Tettegouche SP (North Shore) > Minnesota,3.1,-5.9,1,895
+Darth Vader's Revenge,Low Profile Dome > Tuolumne Meadows > Yosemite National Park > California,3.1,5.10a,1,896
+Adolescent Homosapien,Decadent Wall > Breadloaves > City of Rocks > South Idaho > Idaho,3,5.7,1,897
+Cry Baby,(k) The Dihedrals > Smith Rock > Central Oregon > Oregon,3.1,5.8+,1,898
+Persistent Vegetative State,Little Eiger > Clear Creek Canyon > Golden > Colorado,3.1,5.10a/b,1,899
+Chocolate Corner,Donnelly Canyon > Indian Creek > Southeast Utah > Utah,3,5.9+,1,900
+Sky Ridge,(1) Northeast Face > (m) Smith Rock Group > Smith Rock > Central Oregon > Oregon,3.1,5.8 R,3,901
+West Crack (aka Star Wars),Lower Peanuts > Peanuts Walls > Eldorado Canyon SP > Boulder > Colorado,3,5.8,2,902
+Oyster,Holiday Block > Sand Rock > Alabama,3.1,5.10a,1,903
+Hiatus,Left Book > Lumpy Ridge > Estes Park Valley > Colorado,3,5.7+,3,904
+East Crack,East Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3,5.8,3,905
+Skylight Arete,Pipeline Wall > Telluride/Norwood area > Colorado,3.4,5.8,3,906
+Wild Turkey,Private Idaho > Lookout Point Area > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3,5.7,1,907
+Brush Your Teeth,Ice Cream Parlor > Kane Springs Canyon > Southeast Utah > Utah,2.8,5.9,1,908
+Gouda,Swiss Wall > Jacks Canyon > Winslow- Hwy’s 87 & 99 Corridors > Northern Arizona > Arizona,3.1,5.9,1,909
+July 4th,"Euphamiah Beresford Memorial Wall a.k.a. ""The Butt Rocks Wall"" > Sunshine > Spearfish Canyon > South Dakota",3.5,5.10a,1,910
+Ride the Wild,Lower Looner Land > The Mine Area > Queen Creek Canyon > Central Arizona > Arizona,3.1,5.9,1,911
+Demanda,Spaghetti Western Wall > Upper East Fork (UEF) > Jemez Mountains and Jemez Valley > New Mexico,3.1,5.9+,1,912
+The Open Book,Summit Wall > Lone Peak Cirque > Central Wasatch > Wasatch Range > Utah,3,5.7+,5,913
+Stoner's Boner,Chimney Rock > 2 - Bear Canyon > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3.1,5.9,1,914
+Black Streak,Devil's Castle > Albion Basin > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3,5.10a/b PG13,7,915
+Nervous in Suburbia,Wall Street > Potash Road > Southeast Utah > Utah,3,5.10a,1,916
+La Cosita Right,Little John and La Cosita > Southwest Base > 1. Base Routes > B. El Capitan > Valley North Side > Yosemite Valley > Yosemite National Park > California,3.1,5.9,1,917
+Snooky's Return,f. The Guides' Wall (Madame G's) > The Trapps > The Gunks > New York,3.1,5.8,3,918
+Beulah's Book,Solar Slab - Lower Tier > 12-Oak Creek Canyon > Red Rock > Southern Nevada > Nevada,3,5.9,3,919
+Bush & Dirt Crack aka Pseudo-Cenotaph aka I Need a Shower,Jabba Buttress > East  Animas > Durango > Colorado,3.1,5.8,2,920
+Chasin' the Lizard,Rattletale Wall > Lookout Point Area > Index > Skykomish Valley > Central-West Cascades & Seattle > Washington,3.1,5.10a,1,921
+Ticks Are For Kids,Lilly Bluff > Obed & Clear Creek > Tennessee,3.1,5.10a,1,922
+Agatha Christie (Direct),North Fin > 4 - Windy Point West > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3.1,5.8,1,923
+The Climb Too Tough To Die,The Sheepshead > Sheepshead Area (Southwest) > West Stronghold > Cochise Stronghold > Southern Arizona > Arizona,3.1,5.10- PG13,6,924
+Glass Ocean,Glass Ocean and Environs > Big Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3.1,5.8+,1,925
+First Best,Gallatin Tower > West Side > Gallatin Canyon > Southwest Region > Montana,3.1,-5.1,1,926
+Harpoon,Main Tier > Ship Rock > 2. Northern Mountains Region > North Carolina,3.1,5.10a,1,927
+Broken Sling,a. Beginning of cliff to Gelsa > The Near Trapps > The Gunks > New York,3.1,5.8+ PG13,2,928
+Don't Feed The Monkey,Orangutan Wall > Left Fork > Maple Canyon > Central Utah > Utah,3.1,5.7,1,929
+The Ramp,Lunch Rock > Mission Gorge > South San Diego County > San Diego County > California,3,5.7,1,930
+Mullah,California Ridge > Castle Rock Area > San Francisco Bay Area > California,3,5.10a,1,931
+Wong Climb,(d) Northwest Recess > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3.1,5.8,2,932
+Absurdland,g. V3 - Middle Earth > The Trapps > The Gunks > New York,3.1,5.8+,1,933
+Tomato,South Peak West Face (Main Area) > South Peak - West Face > Seneca Rocks > West Virginia,3.1,5.8,2,934
+Reed's Pinnacle Regular Route,Reed's Pinnacle > At. Reed's Pinnacle Area > Lower Merced River Canyon > Yosemite Valley > Yosemite National Park > California,3.1,5.9,4,935
+Grand Central,a. Beginning of cliff to Gelsa > The Near Trapps > The Gunks > New York,3.1,5.9,2,936
+False Alarm Jam,12: Rainy Wednesday Tower > East Bluff 04 - East Rampart > Devil's Lake > Baraboo Range > Wisconsin,3.1,5.7,1,937
+Blonde Ambition,Sunset South > Sunset Park > Tennessee,3.1,5.7+,1,938
+Miranda Rayne,The Shire > Pendergrass-Murray Recreational Preserve (PMRP) > Red River Gorge > Kentucky,3.1,5.9,1,939
+Endless Bliss,Gun Show > Far Side > Exit 38 > North Bend & Vicinity > Central-West Cascades & Seattle > Washington,3.1,5.9,2,940
+Hindu Kush,Main Tier > Ship Rock > 2. Northern Mountains Region > North Carolina,3.1,5.8,2,941
+Cloud Nine,Pearly Gates > Snow Creek Area > Icicle Creek > Leavenworth > Central-East Cascades Wenatchee & Leavenworth > Washington,3.1,5.9,2,942
+Squatters Rights,Funarama > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.1,5.7,1,943
+Hot Flash,First Creek Slabs > 14-First Creek Canyon > Red Rock > Southern Nevada > Nevada,3,5.8,10,944
+Rock Lobster,Otter Cliffs > -Acadia National Park > Maine,3,5.9,1,945
+Highway Star,Aw. Highway Star > Lower Merced River Canyon > Yosemite Valley > Yosemite National Park > California,3.1,5.10a,1,946
+West Face,Bell Buttress - Main Crag > Bell Buttress Massif > Boulder Canyon > Boulder > Colorado,3.1,5.9+,1,947
+Lost at Sea,Upper Tier > Ship Rock > 2. Northern Mountains Region > North Carolina,3.1,5.8,1,948
+Short Circuit,Transformer Corridor > City of Rocks > South Idaho > Idaho,3.1,5.10a,1,949
+Blanca Nieves,Caliche (Ciales) > Puerto Rico > North America > International,3.8,5.8,1,950
+Vector,Main Cliff > Ragged Mountain > Central Valley > Connecticut,3.1,5.8+,1,951
+Arete Horizon,The Pond > Queen Creek Canyon > Central Arizona > Arizona,3.1,5.10a,1,952
+Dynabolt Gold,The Great Wall > Muir Valley > Red River Gorge > Kentucky,3.1,5.10a,1,953
+Preparation H,East Wall > Main Formation > Lover's Leap > Highway 50 Corridor > Lake Tahoe > California,3.1,5.8,1,954
+Apparition,Apparition Rock (Front) > Apparition Rock > Indian Cove Campground > Indian Cove > Joshua Tree National Park > California,3.1,5.10a,1,955
+The Consolation,(d) Northwest Recess > Tahquitz Rock > Tahquitz & Suicide Rocks > California,3,5.9,6,956
+Girls Only,Leda > Tennessee,3.1,5.10a,1,957
+Cold Comfort,Boulder Gully > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.1,5.9,1,958
+Mental As Anything,k. Hydroman Sector > Safe Harbor South > Safe Harbor > South Central PA > Pennsylvania,3.1,5.9+,1,959
+Private Property,North Forty Routes > North Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3.1,5.10a,1,960
+Gangsta Lean,Dihedrals > Upper Gorge > Owens River Gorge > Bishop Area > Sierra Eastside > California,3.1,5.8,1,961
+Russian Arete,Aretes > North Rim Routes > Black Canyon of the Gunnison > Gunnison > Colorado,3,5.9+,6,962
+Twin Cracks,Lower Grotto Wall > Grotto Walls Area > Independence Pass > Colorado,3,5.8,1,963
+North Arete (Left Start Variation),North Arete > Crystal Crag > Lake George > Mammoth Lakes Area > Sierra Eastside > California,3,5.8,4,964
+Imaginary Voyage,The Warlock > The Needles > The Needles / Kern River > Western Sierra > California,3.1,-5.9,4,965
+Vertical Alluvium,West Side > Lemon Reservoir > Durango > Colorado,3.1,5.10a,1,966
+After All This Time,The Balcony > *Rumney > New Hampshire,3.4,5.7,1,967
+Bihedral Arete,The Bihedral (Upper Tier) > The Bihedral Area > Boulder Canyon > Boulder > Colorado,3,5.10a,2,968
+Prehistoric Extermination,Land Before Time Wall > Muir Valley > Red River Gorge > Kentucky,3,5.8,1,969
+Three Little Birds,C. Middle and West Walls > C. Lower Tier > Tiers of Zion > Lookout Mountain Road > Golden > Colorado,3,5.9,1,970
+Refried Brains,Black Velvet Wall > 16-Black Velvet Canyon > Red Rock > Southern Nevada > Nevada,3,5.9,4,971
+Dominion,East Face > Sugarloaf > Sugarloaf Area > Highway 50 Corridor > Lake Tahoe > California,3,5.10a,1,972
+Touch Up,Green Adjective Gully > Little Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3,5.9+,2,973
+W.A.S.P. (What About Some Pesticide?),The Wasp Canyon > Thunder Ridge > West Creek > South Platte > Colorado,3.1,5.7 PG13,1,974
+Rated X,3. Black Wall - Right > Black Wall > Donner Summit > I-80 Corridor > Lake Tahoe > California,3,5.7+,2,975
+The Roof  aka The Corner,The North End > *Cathedral Ledge > New Hampshire,3.1,5.8,1,976
+Glass Balls,Hell Wall (aka Quarry Wall) > Necedah (Petenwell Bluff) > Central > Wisconsin,3.1,-5.8,1,977
+Economique,Wheeler Gorge > Hwy 33/Ojai > Central Coast > California,3,5.10a,1,978
+Slippery When Wet,North Fin > 4 - Windy Point West > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3,5.7,2,979
+Rite of Passage,Funk Rock City > Northern Gorge > Red River Gorge > Kentucky,3.1,5.9+,1,980
+Dr. Strangelove,Kubrick's > Rifle Mountain Park > Rifle > Colorado,3,5.9,1,981
+White Lightning,Hemingway Buttress (East Face Left) > Hemingway Buttress > Lost Horse Area > Joshua Tree National Park > California,3,5.7,1,982
+Cooke Book,West Face > Daff Dome > Daff Area > Tuolumne Meadows > Yosemite National Park > California,3,5.10a,4,983
+Phone Call From Satan,(e) Western Ship - River Face > Smith Rock > Central Oregon > Oregon,3,5.9,1,984
+Bold-Ville,j. The Yellow Wall and The Seasons > The Trapps > The Gunks > New York,3,5.8,2,985
+Curious George,George > Rock Canyon > Southern Wasatch > Wasatch Range > Utah,3.1,5.8,1,986
+Pixie Corner,Pixie Corner > The Smoke Bluffs > Squamish > British Columbia > Canada > North America > International,3.1,5.8,1,987
+Bye Crackie,Coyote Crag > Central Pinnacles > Holcomb Valley Pinnacles > Big Bear City Area > Big Bear North > Big Bear Lake Area > San Bernardino Mountains > California,3,5.7,1,988
+Bee Sting Corner,Southeast Corner > South Peak - East Face > Seneca Rocks > West Virginia,3,5.7,1,989
+Quasar,(3) Catwalk Cliff > West Side > (z) Lower Gorge > Smith Rock > Central Oregon > Oregon,3.1,5.10a/b,1,990
+Hollow Man,North and West Faces > Challenge Buttress > Big Cottonwood Canyon > Central Wasatch > Wasatch Range > Utah,3,5.9,1,991
+Puppy Ride,T-Wall East > The Tennessee Wall > Tennessee,3.1,5.9,1,992
+Treebeard,Walls Of Moria > West Side > Horseshoe Canyon Ranch > North-Central Arkansas > Arkansas,3,5.7+,1,993
+The Ultimate Everything,Echelon Wall > The Chief > Squamish > British Columbia > Canada > North America > International,3,-5.1,10,994
+Chicken Bone,14. Parking Lot > Pilot Mountain > 3. Piedmont Region > North Carolina,3,5.8,1,995
+Diesel Driver,Black Line Buttress > East Side > Gallatin Canyon > Southwest Region > Montana,3.8,5.9,1,996
+The Saigons,Thin Air Face > *Cathedral Ledge > New Hampshire,3,5.8,2,997
+Everything's Gone Green,Main Wall - Center > Isolation Canyon > Central Arizona > Arizona,3.1,5.9,1,998
+The Trident,Atlantis South Side > Atlantis > Queen Creek Canyon > Central Arizona > Arizona,3,5.9,3,999
+In Lightning,The Druid > 6 - Mid-Mountain > Mount Lemmon (Catalina Highway) > Mount Lemmon (Santa Catalina Mountains) > Southern Arizona > Arizona,3,5.8,2,1000
